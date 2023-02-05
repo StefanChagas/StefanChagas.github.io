@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./src/css/style.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página inicial</title>
+    </head>
+    <body onload="bodyonLoad()">
+
+        <script>
+            $(document).ready(function () {
+                if (sessionStorage.getItem("destroyreload") != "off"){
+                    document.getElementById("allcontentindex").style.display = "none";
+                }else{
+                    document.getElementById("allcontentindex").style.display = "block";
+                    document.getElementById("divdestroyerprimary").style.display = "none";
+                    document.getElementById("divdestroyersecondary").style.display = "none";
+                }
+            });
+        </script>
+
+        <div id="divdestroyerprimary" class="divdestroyer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="divstartdestroyer">
+                            <a class="cursorpointer buttondestroyer textwhite" onclick="destroyer()"><i class="bi bi-x-octagon"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="divdestroyersecondary" class="divdestroyer divdestroyersecondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="allcenter divtextdestroyer">
+                            <p class="textdestroyer textanimation cursorpointer" onclick="destroyer()">
+                                Olá, eu sou o <a class="textdestroyersecondary removedecoration">Stefan Augusto</a>! =)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="allcontentindex">
+            <div class="">
+                <div class="container landing-header" id="containerheader">
+                    <div class="row">
+                        <div class="col landing-headercontent" onmouseover="myselfsidebar()" onmouseout="myselfsidebarclose()">    
+                            <a href="./index.html" class="landing-headerparagraph" id="div-aboutMe">Stefan's Portfolio</a>
+                        </div>
+                        <div class="col landing-headercontent">    
+                            <a class="titleMenubar selectedButton" href="./index.html">Início</a>
+                            <a>|</a>
+                            <a class="titleMenubar" href="./aboutme.html">Sobre</a>
+                            <a>|</a>
+                            <a class="titleMenubar" href="./resumecv.html">Currículo</a>
+                        </div>
+                        <div class="col landing-headercontent">    
+                            <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="https://www.linkedin.com/in/stefanchagas"><i class="bi bi-linkedin"></i></a>
+                            <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="https://github.com/StefanChagas"><i class="bi bi-github"></i></a>
+                            <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="./contact.html"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="mySidebar" class="sidebar">
+                <!-- <a href="#"><img class="mypicture" id="mypictureclean" src="./src/images/mypictureclean.png"></img></a> -->
+                <a class="sidebar-myname" href="#">Stefan A R Chagas</a>
+                <a class="sidebar-mycontent" href="#">⇨ 19 anos</a>
+                <a class="sidebar-mycontent" href="#">⇨ Técnico em informática</a>
+                <a class="sidebar-mycontent" href="#">⇨ Conhecimento resumido:</a>
+                <a class="sidebar-mycontent" href="#">⇨ Linguagem PHP</a>
+                <a class="sidebar-mycontent" href="#">⇨ Linguagem Python</a>
+                <a class="sidebar-mycontent" href="#">⇨ Linguagem HTML</a>
+                <a class="sidebar-mycontent" href="#">⇨ Linguagem JavaScript</a>
+                <a class="sidebar-mycontent" href="#">⇨ Rest API</a>
+                <a class="sidebar-mycontent" href="#">⇨ Banco de dados relacional</a>
+            </div>
+    
+            <div class="container" id="bodylandingConent">
+                <div class="row">
+                    <div class="col-sm-2">    
+    
+                    </div>
+                    <div class="col-sm-4">    
+                        <a href="./javascriptpage.html" class="displayBlock">
+                            <div id="led11" class="ledonimageLeft displaySingle"></div>
+                            <img class="imagesbodylanding imagebody displaySingle imageangle" src="./src/images/javascript.png"></img>
+                            <div id="led12" class="ledonimageRight displaySingle"></div>
+                        </a>
+                        <a href="./phppage.html" class="displayBlock">
+                            <div id="led21" class="ledonimageLeft displaySingle"></div>
+                            <img class="imagesbodylanding imagebody imageangle" src="./src/images/php.png"></img>
+                            <div id="led22" class="ledonimageRight displaySingle"></div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">    
+                        <a href="./pythonpage.html" class="displayBlock">
+                            <div id="led31" class="ledonimageLeft displaySingle"></div>
+                            <img class="imagesbodylanding imagebody imageangle" src="./src/images/python.png"></img>
+                            <div id="led32" class="ledonimageRight displaySingle"></div>
+                        </a>
+                        <a href="./algorithmpage.html" class="displayBlock">
+                            <div id="led41" class="ledonimageLeft displaySingle"></div>
+                            <img class="imagesbodylanding imagebody imageangle" src="./src/images/algorithm.png"></img>
+                            <div id="led42" class="ledonimageRight displaySingle"></div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">    
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container" id="bodylandingsecondaryConent">
+                <div class="row">
+                    <div class="col-sm-2">    
+    
+                    </div>
+                    <div class="col-sm-4">    
+                        <a href="./myprojects.html" class="displayBlock">
+                            <div id="led51" class="ledonimageLeft displaySingle"></div>
+                            <img class="imagesbodylanding imagebody imageangle" src="./src/images/projects.png"></img>
+                            <div id="led52" class="ledonimageRight displaySingle"></div>
+                        </a>
+                        <a href="#"><img class="imagesbodylanding imagebody imageOpacity" src="./src/images/algorithm.png"></img></a>
+                    </div>
+                    <div class="col-sm-4">    
+    
+                    </div>
+                    <div class="col-sm-2">    
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="allcenter landingbuttonPage">
+                <div>
+                    <a id="landingbuttonsPage" class="landingbuttonPage" onclick="landingpageSecondary()"><i id="landingbuttonbookanotherPage" class="bi bi-book"></i><i id="landingbuttonanotherPage" class="bi bi-chevron-compact-right"></i></a>
+                </div>
+            </div>
+    
+            <div id="footer" class="">
+                <div class="container allcenter" id="containerfooter">
+                    <div class="row">
+                        <div class="col-2">
+    
+                        </div>
+                        <div class="col-2 landing-footer">
+                            <div class="footerTitle">
+                                <a class="textwhite contentwithoutselection removedecoration">Atalhos:</a><br>
+                            </div>
+                            <div class="allleft">
+                                <a class="footerContent" href="./myprojects.html"><i class="bi bi-card-list"></i> projetos<br></a>
+                                <a class="footerContent" href="./resumecv.html"><i class="bi bi-file-earmark-person" ></i> currículo<br></a>
+                                <a class="footerContent" href="./phppage.html"><i class="bi bi-caret-right"></i> página PHP<br></a>
+                                <a class="footerContent" href="./javascriptpage.html"><i class="bi bi-caret-right"></i> página javaScript<br></a>
+                                <a class="footerContent" href="./pythonpage.html"><i class="bi bi-caret-right"></i> página Python<br></a>
+                                <a class="footerContent" href="./algorithmpage.html"><i class="bi bi-caret-right"></i> página algoritmo<br></a>
+                            </div>
+                        </div>
+                        <div class="col-1">
+    
+                        </div>
+                        <div class="col-2 landing-footer">
+                            <div class="footerTitle">
+                                <a class="textwhite contentwithoutselection removedecoration">Opções:</a><br>
+                            </div>
+                            <div class="allleft">
+                                <a id="landingbuttonsTheme" onclick="typeTheme()" class="footerContent"><i id="landingbuttonTheme" class="bi bi-brightness-alt-high"></i> tema<br></a>
+                                <a class="footerContent" href="#"><i class=""></i> <br></a>
+                                <a class="footerContent" href="#"><i class=""></i> <br></a>
+                            </div>
+                        </div>
+                        <div class="col-1">
+    
+                        </div>
+                        <div class="col-2 landing-footer">
+                            <div class="footerTitle">
+                                <a class="textwhite contentwithoutselection removedecoration"></a><br>
+                            </div>
+                            <div class="allleft">
+                                <a class="footerContent" href="#"><i class=""></i> <br></a>
+                                <a class="footerContent" href="#"><i class=""></i> <br></a>
+                            </div>
+                        </div>
+                        <div class="col-2">
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="src/javascript/index.js"></script>
+    </body>
+</html>
+
+<!-- 
+    IDEIAS:
+    - criar opção de baixar PDF com algum conteudo salvo no banco de dados pelo usuário
+    - criar imagem minha estilo desenho e colocar na landing page abaixo do botão de paginação
+    - tirar LEDs qnd tema light
+
+    AFAZERES: 
+    - verificar o site com JS desabilitado
+    - mudar JS da div destroy, pq sem ele habilitado a div aparece eternamente
+    - & imagens da landing page ficam todas na msm página, o problema é que cria um espaçamento desnecessário (talvez criar uma margem-bottom que some qnd desativa o JS)
+    - versionar código
+    - colocar meu projeto Electron no Git
+    - tirar img com opacity da landing page e colocar margin-bottom com msm tamanho da classe da imagem 
+    -
+    - relacionados a screen ->
+    - sidebar screen media ja buga
+    - footer buga já em 150% de zoom
+    - div destroyer n é resposiva
+    - sidebar quando screen media ou menor sobrepõe outras (arrumar isso na screen média e nas outras fazer com que ocupe toda tela)
+    - LEDs qnd zoom 125% ficam passando do pto máximo
+    - SOLUÇÃO POSSÍVEL:
+    - criar, no css, filtro como media screen para classes, qnd screen x, classe x, qnd screen y, classe y
+
+    ARRUMAR:
+    - link do botão do projeto na página myprojects.html
+    - back end "contate-me"
+    - back end "copiar e-mail"
+    - background-color da div destroyer
+    - icone e-mail diferente qnd usuário está na página de contato
+
+    ICONS:
+    - <i class="bi bi-blockquote-left"></i> -> barras horizontais com aspas (para um possível texto escrito na primeira pessoa)
+    - <i class="bi bi-envelope-open"></i> -> icone e-mail aberto (usar qnd o usuário estiver dentro da página de envio de e-mail)
+
+-->

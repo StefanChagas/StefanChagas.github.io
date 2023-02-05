@@ -1,0 +1,514 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: white;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.lightScroll::-webkit-scrollbar-track-piece {
+    background-color: #ffffff;
+}
+
+.darkScroll::-webkit-scrollbar-track-piece {
+    background-color: #212529;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: #008B8B;
+}
+
+.allcenter {
+    text-align: center;
+}
+
+.allleft {
+    text-align: left;
+}
+
+.alljustify {
+    text-align: justify;
+}
+
+.displaySingle {
+    display: inline-block;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.removedecoration {
+    text-decoration: none;
+}
+
+.marginleft {
+    margin-left: 20px;
+}
+
+.textwhite {
+    color: white;
+}
+
+.textwhite:hover {
+    color: white;
+}
+
+.cursorpointer {
+    cursor: pointer;
+}
+
+.marginsmallpage {
+    margin-bottom: 160px;
+}
+
+.divdestroyer {
+    background-color: #212529;
+}
+
+.divdestroyersecondary {
+    margin-top: 188px;
+    background-color: #212529;
+}
+
+.divstartdestroyer {
+    margin-top: 20px;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+}
+
+.buttondestroyer:hover {
+    color: #02adad;
+}
+
+.divtextdestroyer {
+    position: absolute;
+}
+
+.textdestroyer {
+    border-right: 2px solid #02adad;
+    color: #02adad;
+    font-size: 45px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none; 
+}
+
+.textdestroyer:hover {
+    color: white;
+}
+
+.textdestroyersecondary {
+    color: white;
+}
+
+.textdestroyersecondary:hover {
+    color: #02adad;
+}
+
+.textanimation {
+    animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
+}   
+
+@keyframes cursormodify {
+    from { border-right-color: white; }
+    to { border-right-color: transparent; }
+}
+
+@keyframes texthello {
+    from { width: 0; }
+    to { width: 653px; }
+}
+
+.contentwithoutselection {
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none; 
+}
+
+.landing-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #008B8B;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    transition: height  1.3s, width  1.3s, font-size 1.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.landing-header:hover {
+    height: 65px;
+    font-size: 18px;
+    transition: height  1.3s, width  1.3s, font-size 1.3s;
+    color: white;
+}
+
+.landing-headercontent {
+    margin-top: 18px !important;
+    height: 75px;
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none;  
+}
+
+.landing-headerparagraph {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.landing-iconsHeader {
+    color: white;
+    margin-right: 5px;
+}
+
+.landing-iconsHeader:hover {
+    color: #a9ffff;
+}
+
+.imagesbodylanding {
+    max-width: 70%; 
+    width: 70%;
+    max-height: 48%;
+    height: 48%;
+    margin-bottom: 10px;
+}
+
+.imagesbodylandingSecondary {
+    max-width: 70%; 
+    width: 70%;
+    max-height: 48%;
+    height: 48%;
+    margin-bottom: 10px;
+}
+
+.imageOpacity {
+    opacity: 0% !important;
+    background: white;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #008B8B;
+    overflow-x: hidden;
+    transition: 1.3s;
+    padding-top: 30px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 1.3s;
+}
+
+.sidebar a:hover {
+    color: #fff;
+}
+
+.sidebar-myname {
+    font-size: 15px !important;
+}
+
+.sidebar-mycontent {
+    font-size: 13px !important;
+}
+
+.mypicture {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#bodylandingConent {
+    transition: height  1.3s, width  1.3s, font-size 1.3s;
+    text-align: center;
+}
+
+#bodylandingsecondaryConent {
+    transition: height  1.3s, width  1.3s, font-size 1.3s;
+    text-align: center;
+}
+
+.imageangle {
+    -webkit-transform: skew(-1deg);
+    -ms-transform: skew(-1deg); 
+    transform: skew(-1deg);
+    animation-name: angle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.imageangle:hover {
+    -webkit-transform: scale(1.03) !important;
+    -ms-transform: scale(1.03) !important;
+    transform: scale(1.03) !important;
+}
+
+@keyframes angle {
+    25% {-webkit-transform: skew(1deg);
+        -ms-transform: skew(1deg); 
+        transform: skew(1deg);}
+}
+
+/* LED padrão */
+.ledonimageLeft {
+    top: -35px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #8695d3;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-name: led;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #8695d3;
+    position: relative;
+}
+
+@keyframes led {
+    25% {background-color: #02adad; box-shadow: 0px 0px 22px #02adad; top: 85px;};
+}
+
+.ledonimageRight {
+    top: 85px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #02adad;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-duration: 6s;
+    animation-name: ledright;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #02adad;
+    position: relative;
+}
+
+@keyframes ledright {
+    25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
+}
+
+/* LED para tema light */
+.ledonimageLeftlight {
+    top: -35px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #8695d3;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-name: led;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #8695d3;
+    position: relative;
+}
+
+@keyframes led {
+    25% {background-color: #02adad; box-shadow: 0px 0px 22px #02adad; top: 85px;};
+}
+
+.ledonimageRightlight {
+    top: 85px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #02adad;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-duration: 6s;
+    animation-name: ledright;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #02adad;
+    position: relative;
+}
+
+@keyframes ledright {
+    25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
+}
+
+.titleMenubar {
+    color: white;
+    font-size: 14px;
+}
+
+.titleMenubar:hover {
+    color: #a9ffff;
+}
+
+.landingbuttonPage {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.landingbuttonPage:hover {
+    color: #008B8B;
+}
+
+#landingbuttonsTheme {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footerContent {
+    color: white;
+}
+
+.footerContent:hover {
+    color: #a9ffff;
+}
+
+.footerTitle {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.landing-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #008B8B;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    height: 180px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+    font-size: 14px !important;
+    position:relative;
+    top: 0px;
+}
+
+.landing-footer:hover {
+    color: white;
+    top:-1px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
+}
+
+.darkTheme {
+    color: white;
+}
+
+.darkTheme:hover {
+    color: #008B8B;
+}
+
+.darkThemeclean {
+    color: white;
+}
+
+.selectedButton {
+    color: #a9ffff;
+    cursor: default;
+}
+
+.textDark {
+    color: black;
+}
+
+.btn-default {
+    color: white;
+    border: 1px #008B8B;
+    border-radius: 3px;
+    background-color: #008B8B;
+    width: 150px;
+    max-width: 150px;
+    height: 40px;
+    max-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-default:hover {
+    background-color: #02adad;
+}
+
+.btn-default:active {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btncopy {
+    color: #02adad;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.inputemail {
+    background-color: white;
+    border: 1px solid #515960;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.inputemail::placeholder {
+    color: #212529;
+}
+
+.inputemail:hover {
+    border: 1px solid #212529;
+}
+
+.inputemaildark {
+    background-color: #212529;
+    border: 1px solid white;
+    color: white;
+}
+
+.inputemaildark::placeholder {
+    color: rgb(192, 192, 192);
+}
+
+.inputemaildark:hover {
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.inputcontentsmall {
+    width: 60%;
+    max-width: 60%;
+}
+
+.textform {
+    width: 90px;
+    max-width: 90px;
+}
