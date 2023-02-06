@@ -14,51 +14,27 @@
             $(document).ready(function () {
                 if (sessionStorage.getItem("destroyreload") != "off"){
                     document.getElementById("allcontentindex").style.display = "none";
+                    document.body.style.backgroundColor = '#212529';
                 }else{
                     document.getElementById("allcontentindex").style.display = "block";
-                    document.getElementById("divdestroyerprimary").style.display = "none";
-                    document.getElementById("divdestroyersecondary").style.display = "none";
+                    document.getElementById("divdestroyer").style.display = "none";
                 }
             });
         </script>
 
-        <div id="divdestroyerprimary" class="divdestroyer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-1">
-
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="divstartdestroyer">
-                            <a class="cursorpointer buttondestroyer textwhite" onclick="destroyer()"><i class="bi bi-x-octagon"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-
-                    </div>
+        <div id="divdestroyer">
+            <div class="divbuttondestroyer">
+                <a class="cursorpointer buttondestroyer textwhite" onclick="destroyer()"><i class="bi bi-x-octagon"></i></a>
+            </div>
+            <div class="divpretextdestroyer">
+                <div class="divtextdestroyer">
+                    <p class="textdestroyer textanimation cursorpointer" onclick="destroyer()">
+                        Olá, eu sou o <a class="textdestroyermyname removedecoration">Stefan Augusto</a>! =)
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div id="divdestroyersecondary" class="divdestroyer divdestroyersecondary">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-1">
-
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="allcenter divtextdestroyer">
-                            <p class="textdestroyer textanimation cursorpointer" onclick="destroyer()">
-                                Olá, eu sou o <a class="textdestroyersecondary removedecoration">Stefan Augusto</a>! =)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div id="allcontentindex">
             <div class="">

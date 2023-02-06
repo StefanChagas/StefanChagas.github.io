@@ -9,7 +9,6 @@ function myselfsidebarclose() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("containerheader").style.width = "100%";
     document.getElementById("bodylandingConent").style.width = "100%";
-
 }
 
 function bodyonLoad() {
@@ -18,9 +17,15 @@ function bodyonLoad() {
 
 function destroyer() {
     document.getElementById("allcontentindex").style.display = "block";
-    document.getElementById("divdestroyerprimary").style.display = "none";
-    document.getElementById("divdestroyersecondary").style.display = "none";
+    document.getElementById("divdestroyer").style.display = "none";
     sessionStorage.setItem("destroyreload","off");
+    themetest = localStorage.getItem("theme");
+    if (themetest == "dark"){
+        darkMode();
+    }
+    else if (themetest == "light"){
+        lightMode();
+    }
 }
 
 function landingpageSecondary() {
@@ -43,46 +48,6 @@ function landingpageSecondary() {
     }
     
 }
-
-// function modifyTheme() {
-//     if (sessionStorage.getItem("theme") == "dark"){
-//         document.getElementById("landingbuttonTheme").classList.remove('bi-brightness-alt-high-fill');
-//         document.getElementById("landingbuttonTheme").classList.add('bi-brightness-alt-high');
-//         sessionStorage.setItem("theme", "light");
-//         document.body.style.backgroundColor = 'white';
-//         $("body").removeClass("darkScroll");
-//         $("body").addClass("lightScroll");
-
-//         // index.html - button other page
-//         if ($("#landingbuttonsPage").length) { 
-//             document.getElementById("landingbuttonsPage").classList.remove('darkThemeclean');
-//         }
-        
-//         // resumecv.html - content
-//         if ($("#resumeContent").length) { 
-//             document.getElementById("resumeContent").classList.remove('darkThemeclean');
-//         }
-
-//     }else{
-//         document.getElementById("landingbuttonTheme").classList.remove('bi-brightness-alt-high');
-//         document.getElementById("landingbuttonTheme").classList.add('bi-brightness-alt-high-fill');
-//         sessionStorage.setItem("theme", "dark");
-//         document.body.style.backgroundColor = '#212529';
-//         $("body").removeClass("lightScroll");
-//         $("body").addClass("darkScroll");
-
-//         // index.html - button other page
-//         if ($("#landingbuttonsPage").length) { 
-//             document.getElementById("landingbuttonsPage").classList.add('darkThemeclean');
-//         }
-        
-//         // resumecv.html - content
-//         if ($("#resumeContent").length) { 
-//             document.getElementById("resumeContent").classList.add('darkThemeclean');          
-//         }
-
-//     }
-// }
 
 function lightMode() {
     document.getElementById("landingbuttonTheme").classList.remove('bi-brightness-alt-high-fill');

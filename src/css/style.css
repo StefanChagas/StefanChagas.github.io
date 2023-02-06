@@ -74,69 +74,6 @@ body {
     margin-bottom: 160px;
 }
 
-.divdestroyer {
-    background-color: #212529;
-}
-
-.divdestroyersecondary {
-    margin-top: 188px;
-    background-color: #212529;
-}
-
-.divstartdestroyer {
-    margin-top: 20px;
-    color: white;
-    font-size: 30px;
-    text-align: right;
-}
-
-.buttondestroyer:hover {
-    color: #02adad;
-}
-
-.divtextdestroyer {
-    position: absolute;
-}
-
-.textdestroyer {
-    border-right: 2px solid #02adad;
-    color: #02adad;
-    font-size: 45px;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    -webkit-user-select: none;  
-    -moz-user-select: none;     
-    -ms-user-select: none;      
-    user-select: none; 
-}
-
-.textdestroyer:hover {
-    color: white;
-}
-
-.textdestroyersecondary {
-    color: white;
-}
-
-.textdestroyersecondary:hover {
-    color: #02adad;
-}
-
-.textanimation {
-    animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-}   
-
-@keyframes cursormodify {
-    from { border-right-color: white; }
-    to { border-right-color: transparent; }
-}
-
-@keyframes texthello {
-    from { width: 0; }
-    to { width: 653px; }
-}
-
 .contentwithoutselection {
     -webkit-user-select:none;  
     -moz-user-select:none;     
@@ -384,7 +321,7 @@ body {
     margin-bottom: 6px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
     .landing-header {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -420,9 +357,67 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* Destroyer Small - ID all containers */
+    #divdestroyer {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Destroyer Small - first container */
+    .divbuttondestroyer {
+        margin-top: 20px;
+        margin-right: 26px;
+        color: white;
+        font-size: 30px;
+        text-align: right;
+    }
+
+    /* Destroyer Small - secondary container */
+    .divpretextdestroyer {
+        margin-top: 100px;
+        margin-left: 13px;
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .divtextdestroyer {
+        position: absolute;
+    }
+
+    .textdestroyer {
+        border-right: 2px solid #02adad;
+        color: #02adad;
+        font-size: 24px;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-user-select: none;  
+        -moz-user-select: none;     
+        -ms-user-select: none;      
+        user-select: none; 
+    }
+
+    .textdestroyermyname {
+        color: white;
+    }
+
+    .textanimation {
+        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
+    }   
+
+    @keyframes cursormodify {
+        from { border-right-color: white; }
+        to { border-right-color: transparent; }
+    }
+
+    @keyframes texthello {
+        from { width: 0; }
+        to { width: 350px; }
+    }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     .landing-header {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -463,6 +458,70 @@ body {
         top:-1px;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
     }
+
+    /* Destroyer - first container */
+    .divbuttondestroyer {
+        margin-top: 20px;
+        margin-right: 26px;
+        color: white;
+        font-size: 30px;
+        text-align: right;
+    }
+
+    .buttondestroyer:hover {
+        color: #02adad;
+    }
+
+    /* Destroyer - secondary container */
+    .divpretextdestroyer {
+        margin-top: 183px;
+        margin-left: 113px;
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .divtextdestroyer {
+        position: absolute;
+    }
+
+    .textdestroyer {
+        border-right: 2px solid #02adad;
+        color: #02adad;
+        font-size: 45px;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-user-select: none;  
+        -moz-user-select: none;     
+        -ms-user-select: none;      
+        user-select: none; 
+    }
+
+    .textdestroyer:hover {
+        color: white;
+    }
+
+    .textdestroyermyname {
+        color: white;
+    }
+
+    .textdestroyermyname:hover {
+        color: #02adad;
+    }
+
+    .textanimation {
+        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
+    }   
+
+    @keyframes cursormodify {
+        from { border-right-color: white; }
+        to { border-right-color: transparent; }
+    }
+
+    @keyframes texthello {
+        from { width: 0; }
+        to { width: 653px; }
+    }    
 }
 
 .darkTheme {
@@ -552,3 +611,10 @@ body {
     width: 90px;
     max-width: 90px;
 }
+
+
+
+
+
+
+
