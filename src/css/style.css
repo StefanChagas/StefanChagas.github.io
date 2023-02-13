@@ -1,6 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
@@ -95,6 +92,19 @@ body {
     cursor: pointer;
 }
 
+.imageOpacity {
+    opacity: 0% !important;
+    background: var(--quinary);
+}
+
+.opacitynull {
+    opacity: 0% !important;
+    width: 0px;
+    max-width: 0px;
+    height: 0px;
+    max-height: 0px; 
+}
+
 .bordercompletewidth {
     border: 1px solid var(--tertiary);
     width: 100%;
@@ -116,18 +126,94 @@ body {
     user-select:none; 
 }
 
+/* for header, footer and landing page */
+.landing-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    max-width: 95%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: var(--primary);
+    border-radius: 8px;
+    color: var(--quinary);
+    text-align: center;
+    transition: height 1.3s, width 1.3s, font-size 1.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.landing-header:hover {
+    height: 65px;
+    font-size: 18px;
+    transition: height 1.3s, width 1.3s, font-size 1.3s;
+    color: var(--quinary);
+}
+
 .landing-headercontent {
-    margin-top: 18px !important;
-    height: 75px;
     -webkit-user-select:none;  
     -moz-user-select:none;     
     -ms-user-select:none;      
     user-select:none;  
+    text-decoration: none; 
+    color: var(--quinary);
 }
 
-.landing-headerparagraph {
-    color:  var(--quinary);
+.landing-headercontent:hover {
+    color: var(--secondary);
     text-decoration: none; 
+}
+
+.landing-headericons {
+    margin-right: 5px;
+}
+
+#div-aboutMe:hover {
+    color: var(--quinary);
+}
+
+.landing-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95% !important;
+    max-width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    color: var(--quinary);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.landing-footer:hover {
+    color: var(--quinary);
+    top: -1px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
+}
+
+#landingbuttonsTheme {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footerContent {
+    margin-left: 8px;
+    color: var(--quinary);
+    font-size: 13px;
+}
+
+.footerContent:hover {
+    color: #a9ffff;
+}
+
+.footerTitle {
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .imagesbodylanding {
@@ -144,68 +230,6 @@ body {
     max-height: 48%;
     height: 48%;
     margin-bottom: 10px;
-}
-
-.imageOpacity {
-    opacity: 0% !important;
-    background: var(--quinary);
-}
-
-.opacitynull {
-    opacity: 0% !important;
-    width: 0px;
-    max-width: 0px;
-    height: 0px;
-    max-height: 0px; 
-}
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: var(--primary);
-    overflow-x: hidden;
-    transition: 1.3s;
-    padding-top: 30px;
-}
-
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color:  var(--quinary);
-    display: block;
-    transition: 1.3s;
-}
-
-.sidebar a:hover {
-    color:  var(--quinary);
-}
-
-.sidebar-myname {
-    font-size: 15px !important;
-}
-
-.sidebar-mycontent {
-    font-size: 13px !important;
-}
-
-.mypicture {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-#bodylandingConent {
-    transition: height  1.3s, width  1.3s, font-size 1.3s;
-    text-align: center;
-}
-
-#bodylandingsecondaryConent {
-    transition: height  1.3s, width  1.3s, font-size 1.3s;
-    text-align: center;
 }
 
 .imageangle {
@@ -230,6 +254,114 @@ body {
         transform: skew(1deg);}
 }
 
+/* LED padrão */
+.ledonimageLeft {
+    top: -35px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #8695d3;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-name: led;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #8695d3;
+    position: relative;
+}
+
+@keyframes led {
+    25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
+}
+
+.ledonimageRight {
+    top: 85px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: var(--secondary);
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-duration: 6s;
+    animation-name: ledright;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px var(--secondary);
+    position: relative;
+}
+
+@keyframes ledright {
+    25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
+}
+
+#bodylandingContent {
+    transition: height  1.3s, width  1.3s, font-size 1.3s;
+    text-align: center;
+}
+
+#bodylandingsecondaryContent {
+    transition: height  1.3s, width  1.3s, font-size 1.3s;
+    text-align: center;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    overflow-x: hidden;
+    transition: 1.3s;
+    padding-top: 30px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:  var(--quinary);
+    display: block;
+    transition: 1.3s;
+}
+
+.sidebar a:hover {
+    color:  var(--quinary);
+}
+
+.sidebar-myname {
+    margin-top: 200px;
+    font-size: 15px !important;
+}
+
+.sidebar-mycontent {
+    font-size: 13px !important;
+}
+
+.sidebarImage {
+    height: 550px;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 1.3s;
+}
+
+.mypicture {
+    width: 100%;
+    max-width: 100%;
+    height: 40%;
+    max-height: 40%;
+    position: absolute;
+}
+
 .titleMenubar {
     color: var(--quinary);
     font-size: 14px;
@@ -240,28 +372,14 @@ body {
 }
 
 .landingbuttonPage {
-    margin-bottom: 10px;
     color: var(--senary);
 }
 
-#landingbuttonsTheme {
-    cursor: pointer;
-    text-decoration: none;
+.landingbuttonPage:hover {
+    color: var(--primary);
 }
 
-.footerContent {
-    color: var(--quinary);
-}
-
-.footerContent:hover {
-    color: #a9ffff;
-}
-
-.footerTitle {
-    margin-top: 10px;
-    margin-bottom: 6px;
-}
-
+/* for theme */
 .darkTheme {
     color: var(--quinary);
 }
@@ -274,13 +392,112 @@ body {
     color: var(--quinary);
 }
 
-.selectedButton {
-    color: #a9ffff;
-    cursor: default;
-}
-
 .textDark {
     color: var(--senary);
+}
+
+/*  */
+.boxcontainerCalculator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 38%; 
+    height: 350;
+    background-color: var(--primary);
+    color: var(--quinary);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+}
+
+.boxcontainerCalculator-input {
+    background-color: var(--tertiary);
+    border: 1px solid var(--secondary);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: var(--quinary);
+}
+
+.boxcontainerCalculator-input:hover {
+    box-shadow: var(--secondary) 0px 0px 8px 0px;
+}
+
+.boxcontainerCalculator-input:active {
+    box-shadow: white 0px 0px 8px 0px;
+}
+
+.boxcontainerCalculator-input:focus {
+    box-shadow: white 0px 0px 8px 0px;
+    outline: 0;
+}
+
+/* buttons */
+.btn-average-calc {
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    max-height: 50px;
+    margin: 1px;
+    background-color: var(--tertiary);
+    color: var(--quinary);
+    border: 1px solid var(--senary);
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.btn-average-calc:hover {
+    background-color: var(--quaternary);
+}
+
+.btn-average-calc:active {
+    background-color: var(--secondary);
+}
+
+.btn-average-calc:focus {
+    background-color: var(--quaternary);
+    outline: 0;
+}
+
+.btn-average-calcforDelete {
+    background-color: rgb(190, 20, 20);
+    border: 1px solid rgb(158, 15, 15);
+}
+
+.btn-average-calcforDelete:hover{
+    background-color: rgb(207, 23, 23);
+}
+
+.btn-average-calcforDelete:active {
+    background-color: var(--secondary);
+}
+
+.btn-average-calcforDelete:focus {
+    background-color: rgb(207, 23, 23);
+    outline: 0;
+}
+
+.btn-big-calcforEnter {
+    width: 162px;
+    max-width: 162px;
+    height: 50px;
+    max-height: 50px;
+    margin: 1px;
+    background-color: #0d9843;
+    color: var(--quinary);
+    border: 1px solid #0c8b3d;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.btn-big-calcforEnter:hover {
+    background-color: rgb(17, 183, 81);
+}
+
+.btn-big-calcforEnter:active {
+    background-color: var(--secondary);
+}
+
+.btn-big-calcforEnter:focus {
+    background-color: rgb(17, 183, 81);
+    outline: 0;
 }
 
 .btn-icon {
@@ -374,6 +591,20 @@ body {
     filter: drop-shadow(0 1px 5px white);
 }
 
+.selectedButton {
+    color: #a9ffff;
+    cursor: default;
+}
+
+/* for page full text */
+.paragraphcontentsmall {
+    width: 86% !important;
+    max-width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  */
 .inputemail {
     background-color: var(--quinary);
     border: 1px solid #515960;
@@ -412,1190 +643,4 @@ body {
 .textform {
     width: 90px;
     max-width: 90px;
-}
-
-.boxcontainerCalculator {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 38%; 
-    height: 350;
-    background-color: var(--primary);
-    color: var(--quinary);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-}
-
-.boxcontainerCalculator-input {
-    background-color: var(--tertiary);
-    border: 1px solid var(--secondary);
-    box-sizing: border-box;
-    border-radius: 4px;
-    color: var(--quinary);
-}
-
-.boxcontainerCalculator-input:hover {
-    box-shadow: var(--secondary) 0px 0px 8px 0px;
-}
-
-.boxcontainerCalculator-input:active {
-    box-shadow: white 0px 0px 8px 0px;
-}
-
-.boxcontainerCalculator-input:focus {
-    box-shadow: white 0px 0px 8px 0px;
-    outline: 0;
-}
-
-.btn-average-calc {
-    width: 50px;
-    max-width: 50px;
-    height: 50px;
-    max-height: 50px;
-    margin: 1px;
-    background-color: var(--tertiary);
-    color: var(--quinary);
-    border: 1px solid var(--senary);
-    border-radius: 8px;
-    font-size: 17px;
-}
-
-.btn-average-calc:hover {
-    background-color: var(--quaternary);
-}
-
-.btn-average-calc:active {
-    background-color: var(--secondary);
-}
-
-.btn-average-calc:focus {
-    background-color: var(--quaternary);
-    outline: 0;
-}
-
-.btn-average-calcforDelete {
-    background-color: rgb(190, 20, 20);
-    border: 1px solid rgb(158, 15, 15);
-}
-
-.btn-average-calcforDelete:hover{
-    background-color: rgb(207, 23, 23);
-}
-
-.btn-average-calcforDelete:active {
-    background-color: var(--secondary);
-}
-
-.btn-average-calcforDelete:focus {
-    background-color: rgb(207, 23, 23);
-    outline: 0;
-}
-
-.btn-big-calcforEnter {
-    width: 162px;
-    max-width: 162px;
-    height: 50px;
-    max-height: 50px;
-    margin: 1px;
-    background-color: #0d9843;
-    color: var(--quinary);
-    border: 1px solid #0c8b3d;
-    border-radius: 8px;
-    font-size: 17px;
-}
-
-.btn-big-calcforEnter:hover {
-    background-color: rgb(17, 183, 81);
-}
-
-.btn-big-calcforEnter:active {
-    background-color: var(--secondary);
-}
-
-.btn-big-calcforEnter:focus {
-    background-color: rgb(17, 183, 81);
-    outline: 0;
-}
-
-
-
-@media only screen and (max-width: 330px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position:relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 105px;
-        width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 60% !important;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-        font-size: 14px !important;
-        position:relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .paragraphcontentsmall {
-        width: 86% !important;
-        max-width: 86%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        height: 75px;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-    
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    @keyframes angle {
-        25% {-webkit-transform: skew(1deg);
-            -ms-transform: skew(1deg); 
-            transform: skew(1deg);}
-    }
-    
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -15px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-    
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 65px;};
-    }
-    
-    .ledonimageRight {
-        top: 65px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-    
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -15px;};
-    }
-    
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -15px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-    
-    .ledonimageRightlight {
-        top: 65px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-    
-    /* Destroyer Small - ID all containers */
-    #divdestroyer {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Destroyer Small - first container */
-    .divbuttondestroyer {
-        margin-top: 20px;
-        margin-right: 26px;
-        color: var(--quinary);
-        font-size: 30px;
-        text-align: right;
-    }
-
-    /* Destroyer Small - secondary container */
-    .divpretextdestroyer {
-        margin-top: 100px;
-        margin-left: 13px;
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .divtextdestroyer {
-        position: absolute;
-    }
-
-    .textdestroyer {
-        border-right: 2px solid var(--secondary);
-        color: var(--secondary);
-        font-size: 24px;
-        margin: 0 auto;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
-    }
-
-    .textdestroyermyname {
-        color: var(--quinary);
-    }
-
-    .textanimation {
-        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
-
-    @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
-    }
-
-    @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
-    }
-}
-
-@media only screen and (min-width: 331px) and (max-width: 600px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position:relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 82px;
-        width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 60% !important;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-        font-size: 14px !important;
-        position:relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .paragraphcontentsmall {
-        width: 86% !important;
-        max-width: 86%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .landing-headericons {
-        margin-top: 27px !important;
-        height: 75px;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-    
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
-    }
-
-    .ledonimageRight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    .ledonimageRightlight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    /* Destroyer Small - ID all containers */
-    #divdestroyer {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Destroyer Small - first container */
-    .divbuttondestroyer {
-        margin-top: 20px;
-        margin-right: 26px;
-        color: var(--quinary);
-        font-size: 30px;
-        text-align: right;
-    }
-
-    /* Destroyer Small - secondary container */
-    .divpretextdestroyer {
-        margin-top: 100px;
-        margin-left: 13px;
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .divtextdestroyer {
-        position: absolute;
-    }
-
-    .textdestroyer {
-        border-right: 2px solid var(--secondary);
-        color: var(--secondary);
-        font-size: 24px;
-        margin: 0 auto;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
-    }
-
-    .textdestroyermyname {
-        color: var(--quinary);
-    }
-
-    .textanimation {
-        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
-
-    @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
-    }
-
-    @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
-    }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 679px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position:relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 60px;
-        width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-        font-size: 14px !important;
-        position:relative;
-        top: 0px;
-    }
-
-    .landing-footer:hover {
-        color: var(--quinary);
-        top:-1px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
-    }
-
-    .landingbuttonPage:hover {
-        color: var(--primary);
-    }
-
-    .footerContent {
-        color: var(--quinary);
-        font-size: 10px !important;
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-    
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 35px;};
-    }
-
-    .ledonimageRight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -22px;};
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    .ledonimageRightlight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    /* Destroyer Small - ID all containers */
-    #divdestroyer {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Destroyer Small - first container */
-    .divbuttondestroyer {
-        margin-top: 20px;
-        margin-right: 26px;
-        color: var(--quinary);
-        font-size: 30px;
-        text-align: right;
-    }
-
-    /* Destroyer Small - secondary container */
-    .divpretextdestroyer {
-        margin-top: 100px;
-        margin-left: 13px;
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .divtextdestroyer {
-        position: absolute;
-    }
-
-    .textdestroyer {
-        border-right: 2px solid var(--secondary);
-        color: var(--secondary);
-        font-size: 24px;
-        margin: 0 auto;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
-    }
-
-    .textdestroyermyname {
-        color: var(--quinary);
-    }
-
-    .textanimation {
-        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
-
-    @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
-    }
-
-    @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
-    }
-
-}
-
-@media only screen and (min-width: 680px) and (max-width: 991px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position:relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 60px;
-        width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 240px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-        font-size: 14px !important;
-        position:relative;
-        top: 0px;
-    }
-
-    .landing-footer:hover {
-        color: var(--quinary);
-        top:-1px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
-    }
-
-    .landingbuttonPage:hover {
-        color: var(--primary);
-    }
-
-    .footerContent {
-        color: var(--quinary);
-        font-size: 10px !important;
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-    
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 35px;};
-    }
-
-    .ledonimageRight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -22px;};
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    .ledonimageRightlight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    /* Destroyer Small - ID all containers */
-    #divdestroyer {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Destroyer Small - first container */
-    .divbuttondestroyer {
-        margin-top: 20px;
-        margin-right: 26px;
-        color: var(--quinary);
-        font-size: 30px;
-        text-align: right;
-    }
-
-    /* Destroyer Small - secondary container */
-    .divpretextdestroyer {
-        margin-top: 100px;
-        margin-left: 13px;
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .divtextdestroyer {
-        position: absolute;
-    }
-
-    .textdestroyer {
-        border-right: 2px solid var(--secondary);
-        color: var(--secondary);
-        font-size: 24px;
-        margin: 0 auto;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
-    }
-
-    .textdestroyermyname {
-        color: var(--quinary);
-    }
-
-    .textanimation {
-        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
-
-    @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
-    }
-
-    @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 60px;
-        width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-header:hover {
-        height: 65px;
-        font-size: 18px;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        color: var(--quinary);
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        height: 75px;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-        font-size: 14px !important;
-        position:relative;
-        top: 0px;
-    }
-
-    .landing-footer:hover {
-        color: var(--quinary);
-        top:-1px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
-    }
-
-    .landingbuttonPage:hover {
-        color: var(--primary);
-    }
-
-    /* section for Compound Front */
-    .jsbaseCompoundcalc {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: 100%;
-        height: 320px;
-        border-radius: 8px;
-        background-color: var(--primary);
-        color: var(--quinary);
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-    }
-
-    .jsinputCompoundcalc {
-        background-color: var(--tertiary);
-        border: 1px solid var(--secondary);
-        box-sizing: border-box;
-        border-radius: 4px;
-        color: var(--quinary);
-    }
-
-    .jsinputCompoundcalc:hover {
-        box-shadow: var(--secondary) 0px 0px 8px 0px;
-    }
-
-    .jsinputCompoundcalc:active {
-        box-shadow: white 0px 0px 8px 0px;
-    }
-
-    .jsinputCompoundcalc:focus {
-        box-shadow: white 0px 0px 8px 0px;
-        outline: 0;
-    }
-
-    .jstextformCompoundcalc {
-        width: 170px;
-        max-width: 170px;
-    }
-
-    .jstextformCompoundcalcSecondary {
-        margin-left: 5px;
-    }
-
-    .jsmarginleft {
-        margin-left: 5%;
-    }
-
-    .jsresultShowCompoundcalc {
-        width: 95%;
-        overflow: hidden;
-        word-wrap: break-word;
-        margin: auto;
-        border: 1px solid var(--secondary);
-        border-radius: 8px;
-        height: 48px;
-        max-height: 48px;
-    }
-
-    .jsresultShowContentCompoundcalc {
-        width: 90%;
-        margin-top: 11px !important;
-        overflow: hidden;
-        word-wrap: break-word;
-        margin: auto;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
-    }
-
-    .ledonimageRight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
-    }
-
-    .ledonimageRightlight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
-    }
-
-    /* Destroyer - first container */
-    .divbuttondestroyer {
-        margin-top: 20px;
-        margin-right: 26px;
-        color: var(--quinary);
-        font-size: 30px;
-        text-align: right;
-    }
-
-    /* Destroyer - secondary container */
-    .divpretextdestroyer {
-        margin-top: 183px;
-        margin-left: 113px;
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .divtextdestroyer {
-        position: absolute;
-    }
-
-    .textdestroyer {
-        border-right: 2px solid var(--secondary);
-        color: var(--secondary);
-        font-size: 45px;
-        margin: 0 auto;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
-    }
-
-    .textdestroyer:hover {
-        color: var(--quinary);
-    }
-
-    .textdestroyermyname {
-        color: var(--quinary);
-    }
-
-    .textdestroyermyname:hover {
-        color: var(--secondary);
-    }
-
-    .textanimation {
-        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
-
-    @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
-    }
-
-    @keyframes texthello {
-        from { width: 0; }
-        to { width: 653px; }
-    }    
 }

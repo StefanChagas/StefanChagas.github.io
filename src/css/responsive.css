@@ -1,382 +1,5 @@
 /* X-Small devices */
-.landing-header {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    width: 95% !important;
-    background-color: var(--primary);
-    border-radius: 8px;
-    color: var(--quinary);
-    text-align: center;
-    height: 105px;
-    width: 100%;
-    transition: height 1.3s, width 1.3s, font-size 1.3s;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.landing-footer {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: var(--primary);
-    border-radius: 8px;
-    color: var(--quinary);
-    text-align: center;
-    height: 180px;
-    width: 60% !important;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    font-size: 14px !important;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.paragraphcontentsmall {
-    width: 86% !important;
-    max-width: 86%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.landing-headericons {
-    margin-top: 18px !important;
-    height: 75px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.landing-iconsHeader {
-    color: var(--quinary);
-    margin-right: 5px;
-}
-
-.landing-iconsHeader:hover {
-    color: #a9ffff;
-}
-
-@keyframes angle {
-    25% {
-        -webkit-transform: skew(1deg);
-        -ms-transform: skew(1deg);
-        transform: skew(1deg);
-    }
-}
-
-/* LED padrão */
-.ledonimageLeft {
-    top: -15px;
-    text-align: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #8695d3;
-    width: 6px;
-    max-width: 6px;
-    height: 70px;
-    max-height: 70px;
-    animation-name: led;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    border-radius: 10px;
-    box-shadow: 0px 0px 22px #8695d3;
-    position: relative;
-}
-
-@keyframes led {
-    25% {
-        background-color: var(--secondary);
-        box-shadow: 0px 0px 22px var(--secondary);
-        top: 65px;
-    }
-
-    ;
-}
-
-.ledonimageRight {
-    top: 65px;
-    text-align: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: var(--secondary);
-    width: 6px;
-    max-width: 6px;
-    height: 70px;
-    max-height: 70px;
-    animation-duration: 6s;
-    animation-name: ledright;
-    animation-iteration-count: infinite;
-    border-radius: 10px;
-    box-shadow: 0px 0px 22px var(--secondary);
-    position: relative;
-}
-
-@keyframes ledright {
-    25% {
-        background-color: #8695d3;
-        box-shadow: 0px 0px 22px #8695d3;
-        top: -15px;
-    }
-
-    ;
-}
-
-/* LED para tema light */
-.ledonimageLeftlight {
-    top: -15px;
-    text-align: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #8695d3;
-    width: 6px;
-    max-width: 6px;
-    height: 70px;
-    max-height: 70px;
-    animation-name: led;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    border-radius: 10px;
-    box-shadow: 0px 0px 22px #8695d3;
-    position: relative;
-}
-
-.ledonimageRightlight {
-    top: 65px;
-    text-align: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: var(--secondary);
-    width: 6px;
-    max-width: 6px;
-    height: 70px;
-    max-height: 70px;
-    animation-duration: 6s;
-    animation-name: ledright;
-    animation-iteration-count: infinite;
-    border-radius: 10px;
-    box-shadow: 0px 0px 22px var(--secondary);
-    position: relative;
-}
-
-/* Destroyer Small - ID all containers */
-#divdestroyer {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* Destroyer Small - first container */
-.divbuttondestroyer {
-    margin-top: 20px;
-    margin-right: 26px;
-    color: var(--quinary);
-    font-size: 30px;
-    text-align: right;
-}
-
-/* Destroyer Small - secondary container */
-.divpretextdestroyer {
-    margin-top: 100px;
-    margin-left: 13px;
-    width: 80%;
-    max-width: 80%;
-}
-
-.divtextdestroyer {
-    position: absolute;
-}
-
-.textdestroyer {
-    border-right: 2px solid var(--secondary);
-    color: var(--secondary);
-    font-size: 24px;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.textdestroyermyname {
-    color: var(--quinary);
-}
-
-.textanimation {
-    animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-}
-
-@keyframes cursormodify {
-    from {
-        border-right-color: var(--quinary);
-    }
-
-    to {
-        border-right-color: transparent;
-    }
-}
-
-@keyframes texthello {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 345px;
-    }
-}
-
-/* Small devices */
-@media (min-width: 576px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position: relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 82px;
-        width: 100%;
-        transition: height 1.3s, width 1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 60% !important;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        font-size: 14px !important;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .paragraphcontentsmall {
-        width: 86% !important;
-        max-width: 86%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .landing-headericons {
-        margin-top: 27px !important;
-        height: 75px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {
-            background-color: var(--secondary);
-            box-shadow: 0px 0px 22px var(--secondary);
-            top: 85px;
-        }
-
-        ;
-    }
-
-    .ledonimageRight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {
-            background-color: #8695d3;
-            box-shadow: 0px 0px 22px #8695d3;
-            top: -35px;
-        }
-
-        ;
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    .ledonimageRightlight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
+@media (max-width: 575px) {
     /* Destroyer Small - ID all containers */
     #divdestroyer {
         width: 100% !important;
@@ -440,6 +63,83 @@
             width: 0;
         }
 
+        to {
+            width: 345px;
+        }
+    }
+}
+
+/* Small devices */
+@media (min-width: 576px) {
+    .paragraphcontentsmall {
+        width: 86% !important;
+        max-width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Destroyer Small - ID all containers */
+    #divdestroyer {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Destroyer Small - first container */
+    .divbuttondestroyer {
+        margin-top: 20px;
+        margin-right: 26px;
+        color: var(--quinary);
+        font-size: 30px;
+        text-align: right;
+    }
+
+    /* Destroyer Small - secondary container */
+    .divpretextdestroyer {
+        margin-top: 100px;
+        margin-left: 13px;
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .divtextdestroyer {
+        position: absolute;
+    }
+
+    .textdestroyer {
+        border-right: 2px solid var(--secondary);
+        color: var(--secondary);
+        font-size: 24px;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .textdestroyermyname {
+        color: var(--quinary);
+    }
+
+    .textanimation {
+        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
+    }
+
+    @keyframes cursormodify {
+        from {
+            border-right-color: var(--quinary);
+        }
+        to {
+            border-right-color: transparent;
+        }
+    }
+
+    @keyframes texthello {
+        from {
+            width: 0;
+        }
         to {
             width: 345px;
         }
@@ -448,162 +148,6 @@
 
 /* Medium devices */
 @media (min-width: 768px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position: relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 60px;
-        width: 100%;
-        transition: height 1.3s, width 1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        font-size: 14px !important;
-        position: relative;
-        top: 0px;
-    }
-
-    .landing-footer:hover {
-        color: var(--quinary);
-        top: -1px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
-    }
-
-    .landingbuttonPage:hover {
-        color: var(--primary);
-    }
-
-    .footerContent {
-        color: var(--quinary);
-        font-size: 10px !important;
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {
-            background-color: var(--secondary);
-            box-shadow: 0px 0px 22px var(--secondary);
-            top: 35px;
-        }
-
-        ;
-    }
-
-    .ledonimageRight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {
-            background-color: #8695d3;
-            box-shadow: 0px 0px 22px #8695d3;
-            top: -22px;
-        }
-
-        ;
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    .ledonimageRightlight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
     /* Destroyer Small - ID all containers */
     #divdestroyer {
         width: 100% !important;
@@ -656,7 +200,6 @@
         from {
             border-right-color: var(--quinary);
         }
-
         to {
             border-right-color: transparent;
         }
@@ -666,7 +209,6 @@
         from {
             width: 0;
         }
-
         to {
             width: 345px;
         }
@@ -675,160 +217,8 @@
 
 /* Large devices */
 @media (min-width: 992px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position: relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 60px;
-        width: 100%;
-        transition: height 1.3s, width 1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 240px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        font-size: 14px !important;
-        position: relative;
-        top: 0px;
-    }
-
-    .landing-footer:hover {
-        color: var(--quinary);
-        top: -1px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
-    }
-
     .landingbuttonPage:hover {
         color: var(--primary);
-    }
-
-    .footerContent {
-        color: var(--quinary);
-        font-size: 10px !important;
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .landing-iconsHeader {
-        color: var(--quinary);
-        margin-right: 5px;
-    }
-
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {
-            background-color: var(--secondary);
-            box-shadow: 0px 0px 22px var(--secondary);
-            top: 35px;
-        }
-
-        ;
-    }
-
-    .ledonimageRight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {
-            background-color: #8695d3;
-            box-shadow: 0px 0px 22px #8695d3;
-            top: -22px;
-        }
-
-        ;
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -22px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    .ledonimageRightlight {
-        top: 35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 30px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
     }
 
     /* Destroyer Small - ID all containers */
@@ -883,7 +273,6 @@
         from {
             border-right-color: var(--quinary);
         }
-
         to {
             border-right-color: transparent;
         }
@@ -893,7 +282,6 @@
         from {
             width: 0;
         }
-
         to {
             width: 345px;
         }
@@ -902,56 +290,6 @@
 
 /* X-Large devices */
 @media (min-width: 1200px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 60px;
-        width: 100%;
-        transition: height 1.3s, width 1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-header:hover {
-        height: 65px;
-        font-size: 18px;
-        transition: height 1.3s, width 1.3s, font-size 1.3s;
-        color: var(--quinary);
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        height: 75px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color: var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        font-size: 14px !important;
-        position: relative;
-        top: 0px;
-    }
-
-    .landing-footer:hover {
-        color: var(--quinary);
-        top: -1px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
-    }
-
     .landingbuttonPage:hover {
         color: var(--primary);
     }
@@ -1021,119 +359,6 @@
         margin: auto;
     }
 
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {
-            background-color: var(--secondary);
-            box-shadow: 0px 0px 22px var(--secondary);
-            top: 85px;
-        }
-
-        ;
-    }
-
-    .ledonimageRight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {
-            background-color: #8695d3;
-            box-shadow: 0px 0px 22px #8695d3;
-            top: -35px;
-        }
-
-        ;
-    }
-
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -35px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-
-    @keyframes led {
-        25% {
-            background-color: var(--secondary);
-            box-shadow: 0px 0px 22px var(--secondary);
-            top: 85px;
-        }
-
-        ;
-    }
-
-    .ledonimageRightlight {
-        top: 85px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-
-    @keyframes ledright {
-        25% {
-            background-color: #8695d3;
-            box-shadow: 0px 0px 22px #8695d3;
-            top: -35px;
-        }
-
-        ;
-    }
 
     /* Destroyer - first container */
     .divbuttondestroyer {
@@ -1189,7 +414,6 @@
         from {
             border-right-color: var(--quinary);
         }
-
         to {
             border-right-color: transparent;
         }
@@ -1199,7 +423,6 @@
         from {
             width: 0;
         }
-
         to {
             width: 653px;
         }

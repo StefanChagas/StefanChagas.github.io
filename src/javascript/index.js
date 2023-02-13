@@ -1,24 +1,20 @@
-/*!
- * index.js
- *
- * Copyright 2023 Stefan Chagas
-*/
-
 function myselfsidebar() {
     document.getElementById("mySidebar").style.width = "180px";
     document.getElementById("containerheader").style.width = "70%";
     document.getElementById("bodylandingContent").style.width = "70%";
-
+    document.getElementById("mySidebarImage").style.display = "block";
 }
 
 function myselfsidebarclose() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("containerheader").style.width = "100%";
     document.getElementById("bodylandingContent").style.width = "100%";
+    document.getElementById("mySidebarImage").style.display = "none";
 }
 
 function bodyonLoad() {
     document.getElementById("bodylandingsecondaryContent").style.display = "none";
+    document.getElementById("mySidebarImage").style.display = "none";
 }
 
 $('#buttonstartDestroyer').keydown(function(e) {
@@ -36,8 +32,8 @@ function destroyer() {
     else if (themetest == "light"){
         lightMode();
     }
-
     document.getElementById("buttonthemeFocus").focus();
+    document.getElementById("mySidebarImage").style.display = "none";
 }
 
 function landingpageSecondary() {
