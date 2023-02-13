@@ -1,19 +1,29 @@
+/*!
+ * index.js
+ *
+ * Copyright 2023 Stefan Chagas
+*/
+
 function myselfsidebar() {
     document.getElementById("mySidebar").style.width = "180px";
     document.getElementById("containerheader").style.width = "70%";
-    document.getElementById("bodylandingConent").style.width = "70%";
+    document.getElementById("bodylandingContent").style.width = "70%";
 
 }
 
 function myselfsidebarclose() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("containerheader").style.width = "100%";
-    document.getElementById("bodylandingConent").style.width = "100%";
+    document.getElementById("bodylandingContent").style.width = "100%";
 }
 
 function bodyonLoad() {
-    document.getElementById("bodylandingsecondaryConent").style.display = "none";
+    document.getElementById("bodylandingsecondaryContent").style.display = "none";
 }
+
+$('#buttonstartDestroyer').keydown(function(e) {
+    if(e.keyCode === 27) $('#buttonstartDestroyer').click();
+});
 
 function destroyer() {
     document.getElementById("allcontentindex").style.display = "block";
@@ -26,20 +36,22 @@ function destroyer() {
     else if (themetest == "light"){
         lightMode();
     }
+
+    document.getElementById("buttonthemeFocus").focus();
 }
 
 function landingpageSecondary() {
-    if (document.getElementById("bodylandingsecondaryConent").style.display == "none"){
-        document.getElementById("bodylandingsecondaryConent").style.display = "block";
-        document.getElementById("bodylandingConent").style.display = "none";
+    if (document.getElementById("bodylandingsecondaryContent").style.display == "none"){
+        document.getElementById("bodylandingsecondaryContent").style.display = "block";
+        document.getElementById("bodylandingContent").style.display = "none";
         document.getElementById("landingbuttonanotherPage").classList.remove('bi-chevron-compact-right');
         document.getElementById("landingbuttonanotherPage").classList.add('bi-chevron-compact-left');
 
         document.getElementById("landingbuttonbookanotherPage").classList.remove('bi-book');
         document.getElementById("landingbuttonbookanotherPage").classList.add('bi-book-half');
     }else{
-        document.getElementById("bodylandingsecondaryConent").style.display = "none";
-        document.getElementById("bodylandingConent").style.display = "block";
+        document.getElementById("bodylandingsecondaryContent").style.display = "none";
+        document.getElementById("bodylandingContent").style.display = "block";
         document.getElementById("landingbuttonanotherPage").classList.remove('bi-chevron-compact-left');
         document.getElementById("landingbuttonanotherPage").classList.add('bi-chevron-compact-right');
 
@@ -83,6 +95,12 @@ function lightMode() {
         document.getElementById("led52").classList.remove('ledonimageRight');
         document.getElementById("led52").classList.add('ledonimageRightlight');
     }
+
+    // line border 100% width
+    if ($("#linebordercompletewidth").length) { 
+        document.getElementById("linebordercompletewidth").classList.remove('bordercompletewidth');
+        document.getElementById("linebordercompletewidth").classList.add('bordercompletewidthLight');
+    }
     
     // resumecv.html - content
     if ($("#resumeContent").length) { 
@@ -90,22 +108,42 @@ function lightMode() {
     }
 
     // aboutme.html - content
-    if ($("#aboutmeConent").length) { 
-        document.getElementById("aboutmeConent").classList.remove('darkThemeclean');
+    if ($("#aboutmeContent").length) { 
+        document.getElementById("aboutmeContent").classList.remove('darkThemeclean');
     }
 
     // myprojects.html - content
-    if ($("#projectsConent").length) { 
-        document.getElementById("projectsConent").classList.remove('darkThemeclean');
+    if ($("#projectsContent").length) { 
+        document.getElementById("projectsContent").classList.remove('darkThemeclean');
     }
 
     // contact.html - content
-    if ($("#contactConent").length) { 
-        document.getElementById("contactConent").classList.remove('darkThemeclean');
+    if ($("#contactContent").length) { 
+        document.getElementById("contactContent").classList.remove('darkThemeclean');
         document.getElementById("inputemailContact").classList.remove('inputemaildark');  
         document.getElementById("inputnameContact").classList.remove('inputemaildark');  
         document.getElementById("inputtitleContact").classList.remove('inputemaildark');  
         document.getElementById("inputcontentContact").classList.remove('inputemaildark');  
+    }
+
+    // pythonpage.html - content
+    if ($("#pythonContent").length) { 
+        document.getElementById("pythonContent").classList.remove('darkThemeclean');
+    }
+
+    // phppage.html - content
+    if ($("#phpContent").length) { 
+        document.getElementById("phpContent").classList.remove('darkThemeclean');
+    }
+
+    // algorithmpage.html - content
+    if ($("#algorithmContent").length) { 
+        document.getElementById("algorithmContent").classList.remove('darkThemeclean');
+    }
+
+    // javascriptpage.html - content
+    if ($("#javascriptContent").length) { 
+        document.getElementById("javascriptContent").classList.remove('darkThemeclean');
     }
 
 }
@@ -144,30 +182,55 @@ function darkMode() {
         document.getElementById("led52").classList.remove('ledonimageRightlight');
     }
 
+    // line border 100% width
+    if ($("#linebordercompletewidth").length) { 
+        document.getElementById("linebordercompletewidth").classList.add('bordercompletewidth');
+        document.getElementById("linebordercompletewidth").classList.remove('bordercompletewidthLight');
+    }
+
     // resumecv.html - content
     if ($("#resumeContent").length) { 
         document.getElementById("resumeContent").classList.add('darkThemeclean');          
     }
 
     // aboutme.html - content
-    if ($("#aboutmeConent").length) { 
-        document.getElementById("aboutmeConent").classList.add('darkThemeclean');          
+    if ($("#aboutmeContent").length) { 
+        document.getElementById("aboutmeContent").classList.add('darkThemeclean');          
     }
 
     // myprojects.html - content
-    if ($("#projectsConent").length) { 
-        document.getElementById("projectsConent").classList.add('darkThemeclean');          
+    if ($("#projectsContent").length) { 
+        document.getElementById("projectsContent").classList.add('darkThemeclean');          
     }
 
     // contact.html - content
-    if ($("#contactConent").length) { 
-        document.getElementById("contactConent").classList.add('darkThemeclean');  
+    if ($("#contactContent").length) { 
+        document.getElementById("contactContent").classList.add('darkThemeclean');  
         document.getElementById("inputemailContact").classList.add('inputemaildark');  
         document.getElementById("inputnameContact").classList.add('inputemaildark');  
         document.getElementById("inputtitleContact").classList.add('inputemaildark');  
         document.getElementById("inputcontentContact").classList.add('inputemaildark');  
     }
 
+    // pythonpage.html - content
+    if ($("#pythonContent").length) { 
+        document.getElementById("pythonContent").classList.add('darkThemeclean');
+    }
+
+    // phppage.html - content
+    if ($("#phpContent").length) { 
+        document.getElementById("phpContent").classList.add('darkThemeclean');
+    }
+
+    // algorithmpage.html - content
+    if ($("#algorithmContent").length) { 
+        document.getElementById("algorithmContent").classList.add('darkThemeclean');
+    }
+
+    // javascriptpage.html - content
+    if ($("#javascriptContent").length) { 
+        document.getElementById("javascriptContent").classList.add('darkThemeclean');
+    }
 }
 
 themetest = localStorage.getItem("theme");
@@ -190,9 +253,158 @@ function typeTheme(){
     }
 }
 
-function copyText() {
-    let textoCopiado = "stefanaugusto.dev@gmail.com";
-    textoCopiado.select();
-    document.execCommand("copy");
-    alert("O texto é: " + textoCopiado.value);
-}
+$("#buttonCopyemail").click(function(){
+    // var copyText = "stefanaugusto.dev@gmail.com";
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+})
+
+$("#buttonCompoundcalc").click(function(){
+    var initialvalue = document.getElementById("getresultCompoundcalcInitialvalue").value;
+    var monthvalue = document.getElementById("getresultCompoundcalcMonthvalue").value;
+    var totalyears = document.getElementById("getresultCompoundcalcTime").value;
+    var interestrate = document.getElementById("getresultCompoundcalcInterestrate").value;
+    // TRATAR DADOS, usuário pode acabar usando números com vírgula e etc
+    // & no exibir, tanto no site como no PDF, replace . por ,
+    if (monthvalue > 0 && initialvalue > 0){
+
+        result = parseFloat(initialvalue * ((1 + (parseFloat(interestrate)/12/100)) ** (parseFloat(totalyears)*12))) + (parseFloat(monthvalue) * ((((1 + (parseFloat(interestrate)/12/100))) ** (parseFloat(totalyears)*12) - 1) / (parseFloat(interestrate)/12/100)));
+
+        totalinv = parseFloat(initialvalue) + parseFloat(monthvalue * (totalyears * 12));
+        resultfess = parseFloat(result) - parseFloat(totalinv);
+
+        document.getElementById("resultshowCompoundcalcTotalfinal").innerHTML = "R$ " + result.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalfees").innerHTML = "R$ " + resultfess.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalinv").innerHTML = "R$ " + totalinv;   
+
+        initialvalue = "";
+        monthvalue = "";
+        totalyears = "";
+        interestrate = "";
+        result = "";
+        resultfess = "";
+        totalinv = "";
+    }else if (monthvalue > 0 && (!initialvalue)){
+        result = (parseFloat(monthvalue) * ((1 + (parseFloat(interestrate)/12/100)) ** (parseFloat(totalyears)*12) - 1)) / (parseFloat(interestrate)/12/100);
+
+        totalinv = parseFloat(monthvalue * (totalyears * 12));
+        resultfess = parseFloat(result) - parseFloat(totalinv);
+
+        document.getElementById("resultshowCompoundcalcTotalfinal").innerHTML = "R$ " + result.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalfees").innerHTML = "R$ " + resultfess.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalinv").innerHTML = "R$ " + totalinv;   
+
+        monthvalue = "";
+        totalyears = "";
+        interestrate = "";
+        result = "";
+        resultfess = "";
+        totalinv = "";
+    }else{
+        interestrate = interestrate/100;
+        result = (initialvalue * ((1 + interestrate)**totalyears));
+        resultfess = result - initialvalue;
+
+        if (initialvalue <= 0){
+            initialvalue = "0,00"
+        }
+
+        document.getElementById("resultshowCompoundcalcTotalfinal").innerHTML = "R$ " + result.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalfees").innerHTML = "R$ " + resultfess.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalinv").innerHTML = "R$ " + initialvalue;   
+        
+        initialvalue = "";
+        monthvalue = "";
+        totalyears = "";
+        interestrate = "";
+        result = "";
+        resultfess = "";
+    }
+})
+
+$("#buttonDownloadcompoundcalc").click(function(){
+    var initialvalue = document.getElementById("getresultCompoundcalcInitialvalue").value;
+    var monthvalue = document.getElementById("getresultCompoundcalcMonthvalue").value;
+    var totalyears = document.getElementById("getresultCompoundcalcTime").value;
+    var interestrate = document.getElementById("getresultCompoundcalcInterestrate").value;
+
+    if (monthvalue > 0 && initialvalue > 0){
+        result = parseFloat(initialvalue * ((1 + (parseFloat(interestrate)/12/100)) ** (parseFloat(totalyears)*12))) + (parseFloat(monthvalue) * ((((1 + (parseFloat(interestrate)/12/100))) ** (parseFloat(totalyears)*12) - 1) / (parseFloat(interestrate)/12/100)));
+        totalinv = parseFloat(initialvalue) + parseFloat(monthvalue * (totalyears * 12));
+        resultfess = parseFloat(result) - parseFloat(totalinv);
+        document.getElementById("resultshowCompoundcalcTotalfinal").innerHTML = "R$ " + result.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalfees").innerHTML = "R$ " + resultfess.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalinv").innerHTML = "R$ " + totalinv;   
+    }else if (monthvalue > 0 && (!initialvalue)){
+        result = (parseFloat(monthvalue) * ((1 + (parseFloat(interestrate)/12/100)) ** (parseFloat(totalyears)*12) - 1)) / (parseFloat(interestrate)/12/100);
+        totalinv = parseFloat(monthvalue * (totalyears * 12));
+        resultfess = parseFloat(result) - parseFloat(totalinv);
+        document.getElementById("resultshowCompoundcalcTotalfinal").innerHTML = "R$ " + result.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalfees").innerHTML = "R$ " + resultfess.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalinv").innerHTML = "R$ " + totalinv;   
+    }else{
+        interestratesmall = interestrate/100;
+        result = (initialvalue * ((1 + interestratesmall)**totalyears));
+        resultfess = result - initialvalue;
+        totalinv = initialvalue
+        document.getElementById("resultshowCompoundcalcTotalfinal").innerHTML = "R$ " + result.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalfees").innerHTML = "R$ " + resultfess.toFixed(2).replace(".", ",");
+        document.getElementById("resultshowCompoundcalcTotalinv").innerHTML = "R$ " + totalinv;   
+    }
+    
+    if (initialvalue <= 0){
+        initialvalue = "0,00"
+    }else if (initialvalue % 1 == 0){
+        initialvalue = initialvalue + ",00" 
+    }
+    if (monthvalue <= 0){
+        monthvalue = "0,00"
+    }else if (monthvalue % 1 == 0){
+        monthvalue = monthvalue + ",00" 
+    }
+    if (totalyears <= 0){
+        totalyears = "0";
+    }
+    if (interestrate <= 0){
+        interestrate = "0,00"
+    }else if (interestrate % 1 == 0){
+        interestrate = interestrate + ",00"    
+    }
+
+    var doc = new jsPDF()
+
+    doc.setFontSize(25)
+    doc.setTextColor("#02adad");
+    doc.text("Cálculo de Juros Compostos", 25, 25)
+    doc.addImage("./src/images/projects.png", "PNG", 163, 12, 35, 35)
+    doc.setFontSize(17)
+    doc.setTextColor("black");
+    doc.text("Aporte inicial: ", 25, 45)
+    doc.text("R$ " + initialvalue, 105, 45)
+    doc.text("Aporte mensal: ", 25, 55)
+    doc.text("R$ " + monthvalue, 105, 55)
+    doc.text("Período: ", 25, 65)
+    doc.text(totalyears + " anos", 105, 65)
+    doc.text("Taxa de juros: ", 25, 75)
+    doc.text(interestrate + " % ao ano", 105, 75)
+    
+    doc.text("Valor total final: ", 25, 100)
+    doc.text("R$ " + result.toFixed(2).replace(".", ","), 105, 100)
+    doc.text("Valor total investido: ", 25, 110)
+    doc.text("R$ " + totalinv.replace(".", ","), 105, 110)
+    doc.text("Valor total em juros: ", 25, 120)
+    doc.text("R$ " + resultfess.toFixed(2).replace(".", ","), 105, 120)
+
+    const date = new Date();
+    const currentYear = date.getFullYear();
+
+    doc.text("Copyright 2022-" + currentYear + " ©, Stefan Chagas.", 52, 280)
+
+    doc.save('mycompoundinterest.pdf')
+})
+
+
+
+

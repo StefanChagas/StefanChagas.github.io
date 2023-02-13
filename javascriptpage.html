@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./src/css/style.css"/>
+        <link rel="stylesheet" href="./src/css/main.css"/>
+        <link rel="stylesheet" href="./src/css/config.css"/>
+        <link rel="stylesheet" href="./src/css/global.css"/>
+        <link rel="stylesheet" href="./src/css/responsive.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript</title>
     </head>
@@ -23,7 +28,7 @@
                         <a>|</a>
                         <a class="titleMenubar" href="./resumecv.html">Currículo</a>
                     </div>
-                    <div class="col landing-headercontent">    
+                    <div class="col landing-headericons">    
                         <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="https://www.linkedin.com/in/stefanchagas"><i class="bi bi-linkedin"></i></a>
                         <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="https://github.com/StefanChagas"><i class="bi bi-github"></i></a>
                         <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="./contact.html"><i class="bi bi-envelope"></i></a>
@@ -46,7 +51,7 @@
             <a class="sidebar-mycontent" href="#">⇨ Banco de dados relacional</a>
         </div>
 
-        <div id="javascriptConent">
+        <div id="javascriptContent">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
@@ -54,10 +59,184 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="allcenter">
-                            <p><b></b></p>
+                            <p><b>Demonstração sobre JavaScript</b></p>
                         </div>
-                        <div class="alljustify">
+                        <div>
+                            <div class="allcenter margintitle">
+                                <p>Calculadora de Juros Compostos</p>
+                            </div>
+                            <div class="jsbaseCompoundcalc">
+                                <div class="marginleft allleft">
+                                    <form>
+                                        <p class="displaySingle jstextformCompoundcalc margintopdefault">Aporte inicial <i class="bi bi-arrow-right"></i> </p>
+                                        <input id="getresultCompoundcalcInitialvalue" class="displaySingle jsinputCompoundcalc" type="number"></input><br>
+                                        <p class="displaySingle jstextformCompoundcalc">Aporte mensal <i class="bi bi-arrow-right"></i> </p>
+                                        <input id="getresultCompoundcalcMonthvalue" class="displaySingle jsinputCompoundcalc" type="number"></input><br>
+                                        <p class="displaySingle jstextformCompoundcalc">Período <i class="bi bi-arrow-right"></i> </p>
+                                        <input id="getresultCompoundcalcTime" class="displaySingle jsinputCompoundcalc" type="number"></input>
+                                        <p class="displaySingle jstextformCompoundcalcSecondary">anos</p><br>
+                                        <p class="displaySingle jstextformCompoundcalc">Taxa de juros <i class="bi bi-arrow-right"></i> </p>
+                                        <input id="getresultCompoundcalcInterestrate" class="displaySingle jsinputCompoundcalc" type="number"></input>
+                                        <p class="displaySingle jstextformCompoundcalcSecondary">% ao ano</p>
+                                    </form>
+                                </div>
+                                <div class="allcenter">
+                                    <button id="buttonCompoundcalc" type="button" class="btn-darkdefault marginbottomdefault">calcular</button>
+                                </div>
+                                <div id="linebordercompletewidth" class="bordercompletewidth"></div>
+                                <div class="container jsbaseresultShowCompoundcalc">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="allcenter">
+                                                Valor total final
+                                            </div>
+                                            <div class="jsresultShowCompoundcalc">
+                                                <div class="jsresultShowContentCompoundcalc allcenter">
+                                                    <p id="resultshowCompoundcalcTotalfinal">R$ 0,00</p>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="allcenter">
+                                                Valor total investido
+                                            </div>
+                                            <div class="jsresultShowCompoundcalc">
+                                                <div class="jsresultShowContentCompoundcalc allcenter">
+                                                    <p id="resultshowCompoundcalcTotalinv">R$ 0,00</p>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="allcenter">
+                                                Valor total em juros
+                                            </div>
+                                            <div class="jsresultShowCompoundcalc">
+                                                <div class="jsresultShowContentCompoundcalc allcenter">
+                                                    <p id="resultshowCompoundcalcTotalfees">R$ 0,00</p>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
 
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="allcenter">
+                            <p class="displaySingle">Deseja fazer o download do seu cálculo em PDF?</p>
+                            <button id="buttonDownloadcompoundcalc" type="button" class="btn-default displaySingle marginleft">baixar</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="allcenter margintitle">
+                            <p>Calculadora <i class="bi bi-calculator"></i></p>
+                        </div>
+                        <div class="boxcontainerCalculator marginauto">
+                            <div class="allcenter">
+                                <form>
+                                    <input id="" class="displaySingle boxcontainerCalculator-input margintitle" type="number"></input>
+                                </form>
+                            </div>
+                            <div class="allcenter">
+                                <div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc btn-average-calcforDelete"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">x²</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">√</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">π</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">1</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">2</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">3</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">-</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">4</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">5</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">6</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">7</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">8</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">9</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">/</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">,</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">0</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">%</button>
+                                    </div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc"><i class="bi bi-x"></i></button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="displaySingle">
+                                        <button class="btn-average-calc">AC</button>
+                                    </div>
+                                    <div class="displaySingle marginbottomdefault">
+                                        <button class="btn-big-calcforEnter">=</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-2">

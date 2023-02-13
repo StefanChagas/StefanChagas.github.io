@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./src/css/style.css"/>
+        <link rel="stylesheet" href="./src/css/main.css"/>
+        <link rel="stylesheet" href="./src/css/config.css"/>
+        <link rel="stylesheet" href="./src/css/global.css"/>
+        <link rel="stylesheet" href="./src/css/responsive.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +28,7 @@
 
         <div id="divdestroyer">
             <div class="divbuttondestroyer">
-                <a class="cursorpointer buttondestroyer textwhite" onclick="destroyer()"><i class="bi bi-x-octagon"></i></a>
+                <button id="buttonstartDestroyer" class="btn-destroyer textwhite" onclick="destroyer()" autofocus><i class="bi bi-x-octagon"></i></button>
             </div>
             <div class="divpretextdestroyer">
                 <div class="divtextdestroyer">
@@ -34,7 +38,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="allcontentindex">
             <div class="">
@@ -50,7 +53,7 @@
                             <a>|</a>
                             <a class="titleMenubar" href="./resumecv.html">Currículo</a>
                         </div>
-                        <div class="col landing-headercontent">    
+                        <div class="col landing-headericons">    
                             <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="https://www.linkedin.com/in/stefanchagas"><i class="bi bi-linkedin"></i></a>
                             <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="https://github.com/StefanChagas"><i class="bi bi-github"></i></a>
                             <a class="landing-headerparagraph landing-iconsHeader" target="_blank" href="./contact.html"><i class="bi bi-envelope"></i></a>
@@ -73,7 +76,7 @@
                 <a class="sidebar-mycontent" href="#">⇨ Banco de dados relacional</a>
             </div>
     
-            <div class="container" id="bodylandingConent">
+            <div class="container" id="bodylandingContent">
                 <div class="row">
                     <div class="col-sm-2">    
     
@@ -108,7 +111,7 @@
                 </div>
             </div>
     
-            <div class="container" id="bodylandingsecondaryConent">
+            <div class="container" id="bodylandingsecondaryContent">
                 <div class="row">
                     <div class="col-sm-2">    
     
@@ -173,7 +176,8 @@
                         </div>
                         <div class="col-sm-2 landing-footer">
                             <div class="footerTitle">
-                                <a class="textwhite contentwithoutselection removedecoration"></a><br>
+                                <!-- <a class="textwhite contentwithoutselection removedecoration">asas</a><br>
+                                <img class="myimagefooter" src="./src/images/mypictureclean.png"></img> -->
                             </div>
                             <div class="allleft">
                                 <a class="footerContent" href="#"><i class=""></i> <br></a>
@@ -194,32 +198,37 @@
 
 <!-- 
     IDEIAS:
-    - criar opção de baixar PDF com algum conteudo salvo no banco de dados pelo usuário
     - criar imagem minha estilo desenho e colocar na landing page abaixo do botão de paginação
-    - tirar LEDs qnd tema light
+    - dark theme como tema default
+    - página - algoritmo -> cálculo de juros compostos...
+    - inserir widgets com php e mascarar com alguma div transparente sobrepondo
+    - colocar página e-commerce simulador, com produtos, carrinho, desc e etc, onde o usuário pode add novos produtos com localStorage JS
 
     AFAZERES: 
     - verificar o site com JS desabilitado
     - mudar JS da div destroy, pq sem ele habilitado a div aparece eternamente
     - & imagens da landing page ficam todas na msm página, o problema é que cria um espaçamento desnecessário (talvez criar uma margem-bottom que some qnd desativa o JS)
     - colocar meu projeto Electron no Git
-    - tirar img com opacity da landing page e colocar margin-bottom com msm tamanho da classe da imagem 
+    - animação das imagens da landing page não diminuem com transition x seconds, quando a sidebar é exposta
     -
     - relacionados a screen ->
+    - zoom entre 150% e 200% com problema
     - sidebar screen media ja buga
-    - footer buga já em 150% de zoom
-    - div destroyer n é resposiva
     - sidebar quando screen media ou menor sobrepõe outras (arrumar isso na screen média e nas outras fazer com que ocupe toda tela)
     - LEDs qnd zoom 125% ficam passando do pto máximo
-    - SOLUÇÃO POSSÍVEL:
-    - criar, no css, filtro como media screen para classes, qnd screen x, classe x, qnd screen y, classe y
 
     ARRUMAR:
+    - botão default, em prop menor vaza palavras, ex.: botão de acesso ao projeto Electron no GitHub (colocar font-size como vw)
     - link do botão do projeto na página myprojects.html
     - back end "contate-me"
     - back end "copiar e-mail"
-    - background-color da div destroyer
     - icone e-mail diferente qnd usuário está na página de contato
+    - botões linkedin, github, e-mail sem hover color (na javascript.html por exemplo)
+    -
+    - páginas:
+    - javascriptpage.html - arrumar cálculo Compound Interest (inserção de vírgula vs ponto (TALVEZ colocar célula que insere vírgula automaticamente)) 
+    - & arrumar funcionalidade do download do PDF do cálculo
+    - & calculadora em resolução menor ta com width de 38% apenas
 
     ICONS:
     - <i class="bi bi-blockquote-left"></i> -> barras horizontais com aspas (para um possível texto escrito na primeira pessoa)

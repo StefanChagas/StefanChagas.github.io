@@ -1,740 +1,244 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: var(--quinary);
-    background-color:  var(--quinary);
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-.lightScroll::-webkit-scrollbar-track-piece {
-    background-color:  var(--quinary);
-}
-
-.darkScroll::-webkit-scrollbar-track-piece {
-    background-color: var(--tertiary);
-}
-
-::-webkit-scrollbar-thumb:vertical {
-    height: 5px;
+/* X-Small devices */
+.landing-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 95% !important;
     background-color: var(--primary);
-}
-
-.allcenter {
+    border-radius: 8px;
+    color: var(--quinary);
     text-align: center;
+    height: 105px;
+    width: 100%;
+    transition: height 1.3s, width 1.3s, font-size 1.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.allleft {
-    text-align: left;
-}
-
-.allright {
-    text-align: right;
-}
-
-.alljustify {
-    text-align: justify;
-}
-
-.displaySingle {
-    display: inline-block;
-}
-
-.displayBlock {
-    display: block;
-}
-
-.removedecoration {
-    text-decoration: none;
-}
-
-.marginauto {
-    margin: auto;
-}
-
-.marginleft {
-    margin-left: 20px;
-}
-
-.marginsmallpage {
-    margin-bottom: 160px;
-}
-
-.margintopdefault {
-    margin-top: 10px;
-}
-
-.marginbottomdefault {
-    margin-bottom: 10px;
-}
-
-.margintitle {
+.landing-footer {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.textwhite {
+    background-color: var(--primary);
+    border-radius: 8px;
     color: var(--quinary);
+    text-align: center;
+    height: 180px;
+    width: 60% !important;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: 14px !important;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.textwhite:hover {
-    color: var(--quinary);
+.paragraphcontentsmall {
+    width: 86% !important;
+    max-width: 86%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.cursorpointer {
-    cursor: pointer;
-}
-
-.bordercompletewidth {
-    border: 1px solid var(--tertiary);
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.bordercompletewidthLight {
-    border: 1px solid  var(--quinary);
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.contentwithoutselection {
-    -webkit-user-select:none;  
-    -moz-user-select:none;     
-    -ms-user-select:none;      
-    user-select:none; 
-}
-
-.landing-headercontent {
+.landing-headericons {
     margin-top: 18px !important;
     height: 75px;
-    -webkit-user-select:none;  
-    -moz-user-select:none;     
-    -ms-user-select:none;      
-    user-select:none;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.landing-headerparagraph {
-    color:  var(--quinary);
-    text-decoration: none; 
+.landing-iconsHeader {
+    color: var(--quinary);
+    margin-right: 5px;
 }
 
-.imagesbodylanding {
-    max-width: 70%; 
-    width: 70%;
-    max-height: 48%;
-    height: 48%;
-    margin-bottom: 10px;
+.landing-iconsHeader:hover {
+    color: #a9ffff;
 }
 
-.imagesbodylandingSecondary {
-    max-width: 70%; 
-    width: 70%;
-    max-height: 48%;
-    height: 48%;
-    margin-bottom: 10px;
+@keyframes angle {
+    25% {
+        -webkit-transform: skew(1deg);
+        -ms-transform: skew(1deg);
+        transform: skew(1deg);
+    }
 }
 
-.imageOpacity {
-    opacity: 0% !important;
-    background: var(--quinary);
+/* LED padrão */
+.ledonimageLeft {
+    top: -15px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #8695d3;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-name: led;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #8695d3;
+    position: relative;
 }
 
-.opacitynull {
-    opacity: 0% !important;
-    width: 0px;
-    max-width: 0px;
-    height: 0px;
-    max-height: 0px; 
+@keyframes led {
+    25% {
+        background-color: var(--secondary);
+        box-shadow: 0px 0px 22px var(--secondary);
+        top: 65px;
+    }
+
+    ;
 }
 
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: var(--primary);
-    overflow-x: hidden;
-    transition: 1.3s;
-    padding-top: 30px;
+.ledonimageRight {
+    top: 65px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: var(--secondary);
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-duration: 6s;
+    animation-name: ledright;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px var(--secondary);
+    position: relative;
 }
 
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color:  var(--quinary);
-    display: block;
-    transition: 1.3s;
+@keyframes ledright {
+    25% {
+        background-color: #8695d3;
+        box-shadow: 0px 0px 22px #8695d3;
+        top: -15px;
+    }
+
+    ;
 }
 
-.sidebar a:hover {
-    color:  var(--quinary);
+/* LED para tema light */
+.ledonimageLeftlight {
+    top: -15px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #8695d3;
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-name: led;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px #8695d3;
+    position: relative;
 }
 
-.sidebar-myname {
-    font-size: 15px !important;
+.ledonimageRightlight {
+    top: 65px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: var(--secondary);
+    width: 6px;
+    max-width: 6px;
+    height: 70px;
+    max-height: 70px;
+    animation-duration: 6s;
+    animation-name: ledright;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 22px var(--secondary);
+    position: relative;
 }
 
-.sidebar-mycontent {
-    font-size: 13px !important;
-}
-
-.mypicture {
+/* Destroyer Small - ID all containers */
+#divdestroyer {
     width: 100% !important;
     max-width: 100% !important;
 }
 
-#bodylandingConent {
-    transition: height  1.3s, width  1.3s, font-size 1.3s;
-    text-align: center;
-}
-
-#bodylandingsecondaryConent {
-    transition: height  1.3s, width  1.3s, font-size 1.3s;
-    text-align: center;
-}
-
-.imageangle {
-    -webkit-transform: skew(-1deg);
-    -ms-transform: skew(-1deg); 
-    transform: skew(-1deg);
-    animation-name: angle;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    transition: 3s;
-}
-
-.imageangle:hover {
-    -webkit-transform: scale(1.03) !important;
-    -ms-transform: scale(1.03) !important;
-    transform: scale(1.03) !important;
-}
-
-@keyframes angle {
-    25% {-webkit-transform: skew(1deg);
-        -ms-transform: skew(1deg); 
-        transform: skew(1deg);}
-}
-
-.titleMenubar {
+/* Destroyer Small - first container */
+.divbuttondestroyer {
+    margin-top: 20px;
+    margin-right: 26px;
     color: var(--quinary);
-    font-size: 14px;
+    font-size: 30px;
+    text-align: right;
 }
 
-.titleMenubar:hover {
-    color: #a9ffff;
+/* Destroyer Small - secondary container */
+.divpretextdestroyer {
+    margin-top: 100px;
+    margin-left: 13px;
+    width: 80%;
+    max-width: 80%;
 }
 
-.landingbuttonPage {
-    margin-bottom: 10px;
-    color: var(--senary);
+.divtextdestroyer {
+    position: absolute;
 }
 
-#landingbuttonsTheme {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.footerContent {
-    color: var(--quinary);
-}
-
-.footerContent:hover {
-    color: #a9ffff;
-}
-
-.footerTitle {
-    margin-top: 10px;
-    margin-bottom: 6px;
-}
-
-.darkTheme {
-    color: var(--quinary);
-}
-
-.darkTheme:hover {
-    color: var(--primary);
-}
-
-.darkThemeclean {
-    color: var(--quinary);
-}
-
-.selectedButton {
-    color: #a9ffff;
-    cursor: default;
-}
-
-.textDark {
-    color: var(--senary);
-}
-
-.btn-icon {
-    background: transparent;
-    outline: 0;
-    border: 0px;
-}
-
-.btn-destroyer {
-    background: transparent;
-    outline: 0;
-    border: 0px;
-}
-
-.btn-destroyer:hover {
+.textdestroyer {
+    border-right: 2px solid var(--secondary);
     color: var(--secondary);
+    font-size: 24px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.btn-destroyer:focus {
-    outline: 0;
-    border: 0px;
-}
-
-.btn-default {
-    color: var(--quinary);
-    border: 1px var(--primary);
-    border-radius: 3px;
-    background-color: var(--primary);
-    width: 150px;
-    max-width: 150px;
-    height: 40px;
-    max-height: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.btn-default:hover {
-    background-color: var(--secondary);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
-}
-
-.btn-default:active {
-    box-shadow: var(--secondary) 0px 0px 15px;
-    outline: 0;
-}
-
-.btn-default:focus {
-    box-shadow: var(--secondary) 0px 0px 15px;
-    outline: 0;
-}
-
-.btn-darkdefault {
-    color: var(--quinary);
-    border: 1px solid var(--secondary);
-    border-radius: 3px;
-    background-color: var(--tertiary);
-    width: 150px;
-    max-width: 150px;
-    height: 40px;
-    max-height: 40px;
-}
-
-.btn-darkdefault:hover {
-    background-color: var(--secondary);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
-}
-
-.btn-darkdefault:active {
-    box-shadow: var(--secondary) 0px 0px 15px;
-    outline: 0;
-}
-
-.btn-darkdefault:focus {
-    box-shadow: var(--secondary) 0px 0px 15px;
-    outline: 0;
-}
-
-.btn-copy {
-    color: var(--secondary);
-}
-
-.btn-copy:hover {
-    color: var(--primary);
-    -webkit-filter: drop-shadow(0 1px 5px var(--primary));
-    filter: drop-shadow(0 1px 5px var(--primary));
-}
-
-.btn-copy:active {
-    color: var(--quinary);
-    -webkit-filter: drop-shadow(0 1px 5px white);
-    filter: drop-shadow(0 1px 5px white);
-}
-
-.inputemail {
-    background-color: var(--quinary);
-    border: 1px solid #515960;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-left: 5px;
-}
-
-.inputemail::placeholder {
-    color: var(--tertiary);
-}
-
-.inputemail:hover {
-    border: 1px solid var(--tertiary);
-}
-
-.inputemaildark {
-    background-color: var(--tertiary);
-    border: 1px solid var(--quinary);
+.textdestroyermyname {
     color: var(--quinary);
 }
 
-.inputemaildark::placeholder {
-    color: rgb(192, 192, 192);
+.textanimation {
+    animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
 }
 
-.inputemaildark:hover {
-    border: 1px solid rgb(192, 192, 192);
+@keyframes cursormodify {
+    from {
+        border-right-color: var(--quinary);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
 }
 
-.inputcontentsmall {
-    width: 60%;
-    max-width: 60%;
+@keyframes texthello {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 345px;
+    }
 }
 
-.textform {
-    width: 90px;
-    max-width: 90px;
-}
-
-.boxcontainerCalculator {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 38%; 
-    height: 350;
-    background-color: var(--primary);
-    color: var(--quinary);
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-}
-
-.boxcontainerCalculator-input {
-    background-color: var(--tertiary);
-    border: 1px solid var(--secondary);
-    box-sizing: border-box;
-    border-radius: 4px;
-    color: var(--quinary);
-}
-
-.boxcontainerCalculator-input:hover {
-    box-shadow: var(--secondary) 0px 0px 8px 0px;
-}
-
-.boxcontainerCalculator-input:active {
-    box-shadow: white 0px 0px 8px 0px;
-}
-
-.boxcontainerCalculator-input:focus {
-    box-shadow: white 0px 0px 8px 0px;
-    outline: 0;
-}
-
-.btn-average-calc {
-    width: 50px;
-    max-width: 50px;
-    height: 50px;
-    max-height: 50px;
-    margin: 1px;
-    background-color: var(--tertiary);
-    color: var(--quinary);
-    border: 1px solid var(--senary);
-    border-radius: 8px;
-    font-size: 17px;
-}
-
-.btn-average-calc:hover {
-    background-color: var(--quaternary);
-}
-
-.btn-average-calc:active {
-    background-color: var(--secondary);
-}
-
-.btn-average-calc:focus {
-    background-color: var(--quaternary);
-    outline: 0;
-}
-
-.btn-average-calcforDelete {
-    background-color: rgb(190, 20, 20);
-    border: 1px solid rgb(158, 15, 15);
-}
-
-.btn-average-calcforDelete:hover{
-    background-color: rgb(207, 23, 23);
-}
-
-.btn-average-calcforDelete:active {
-    background-color: var(--secondary);
-}
-
-.btn-average-calcforDelete:focus {
-    background-color: rgb(207, 23, 23);
-    outline: 0;
-}
-
-.btn-big-calcforEnter {
-    width: 162px;
-    max-width: 162px;
-    height: 50px;
-    max-height: 50px;
-    margin: 1px;
-    background-color: #0d9843;
-    color: var(--quinary);
-    border: 1px solid #0c8b3d;
-    border-radius: 8px;
-    font-size: 17px;
-}
-
-.btn-big-calcforEnter:hover {
-    background-color: rgb(17, 183, 81);
-}
-
-.btn-big-calcforEnter:active {
-    background-color: var(--secondary);
-}
-
-.btn-big-calcforEnter:focus {
-    background-color: rgb(17, 183, 81);
-    outline: 0;
-}
-
-
-
-@media only screen and (max-width: 330px) {
+/* Small devices */
+@media (min-width: 576px) {
     .landing-header {
         margin-top: 10px;
         margin-bottom: 10px;
-        position:relative;
+        position: relative;
         width: 95% !important;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 105px;
-        width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    }
-
-    .landing-footer {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
-        text-align: center;
-        height: 180px;
-        width: 60% !important;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
-        font-size: 14px !important;
-        position:relative;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .paragraphcontentsmall {
-        width: 86% !important;
-        max-width: 86%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .landing-headericons {
-        margin-top: 18px !important;
-        height: 75px;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
-    }
-
-    .landing-iconsHeader {
         color: var(--quinary);
-        margin-right: 5px;
-    }
-    
-    .landing-iconsHeader:hover {
-        color: #a9ffff;
-    }
-
-    @keyframes angle {
-        25% {-webkit-transform: skew(1deg);
-            -ms-transform: skew(1deg); 
-            transform: skew(1deg);}
-    }
-    
-    /* LED padrão */
-    .ledonimageLeft {
-        top: -15px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-    
-    @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 65px;};
-    }
-    
-    .ledonimageRight {
-        top: 65px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-    
-    @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -15px;};
-    }
-    
-    /* LED para tema light */
-    .ledonimageLeftlight {
-        top: -15px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: #8695d3;
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-name: led;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px #8695d3;
-        position: relative;
-    }
-    
-    .ledonimageRightlight {
-        top: 65px;
-        text-align: left;
-        margin-left: 5px;
-        margin-right: 5px;
-        background-color: var(--secondary);
-        width: 6px;
-        max-width: 6px;
-        height: 70px;
-        max-height: 70px;
-        animation-duration: 6s;
-        animation-name: ledright;
-        animation-iteration-count: infinite;
-        border-radius: 10px;
-        box-shadow: 0px 0px 22px var(--secondary);
-        position: relative;
-    }
-    
-    /* Destroyer Small - ID all containers */
-    #divdestroyer {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Destroyer Small - first container */
-    .divbuttondestroyer {
-        margin-top: 20px;
-        margin-right: 26px;
-        color: var(--quinary);
-        font-size: 30px;
-        text-align: right;
-    }
-
-    /* Destroyer Small - secondary container */
-    .divpretextdestroyer {
-        margin-top: 100px;
-        margin-left: 13px;
-        width: 80%;
-        max-width: 80%;
-    }
-
-    .divtextdestroyer {
-        position: absolute;
-    }
-
-    .textdestroyer {
-        border-right: 2px solid var(--secondary);
-        color: var(--secondary);
-        font-size: 24px;
-        margin: 0 auto;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
-    }
-
-    .textdestroyermyname {
-        color: var(--quinary);
-    }
-
-    .textanimation {
-        animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
-
-    @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
-    }
-
-    @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
-    }
-}
-
-@media only screen and (min-width: 331px) and (max-width: 600px) {
-    .landing-header {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        position:relative;
-        width: 95% !important;
-        background-color: var(--primary);
-        border-radius: 8px;
-        color:  var(--quinary);
         text-align: center;
         height: 82px;
         width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
+        transition: height 1.3s, width 1.3s, font-size 1.3s;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
@@ -743,13 +247,13 @@ body {
         margin-bottom: 10px;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 180px;
         width: 60% !important;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         font-size: 14px !important;
-        position:relative;
+        position: relative;
         margin-left: auto;
         margin-right: auto;
     }
@@ -764,17 +268,17 @@ body {
     .landing-headericons {
         margin-top: 27px !important;
         height: 75px;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .landing-iconsHeader {
         color: var(--quinary);
         margin-right: 5px;
     }
-    
+
     .landing-iconsHeader:hover {
         color: #a9ffff;
     }
@@ -799,7 +303,13 @@ body {
     }
 
     @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
+        25% {
+            background-color: var(--secondary);
+            box-shadow: 0px 0px 22px var(--secondary);
+            top: 85px;
+        }
+
+        ;
     }
 
     .ledonimageRight {
@@ -821,7 +331,13 @@ body {
     }
 
     @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
+        25% {
+            background-color: #8695d3;
+            box-shadow: 0px 0px 22px #8695d3;
+            top: -35px;
+        }
+
+        ;
     }
 
     /* LED para tema light */
@@ -895,10 +411,10 @@ body {
         margin: 0 auto;
         white-space: nowrap;
         overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .textdestroyermyname {
@@ -907,32 +423,43 @@ body {
 
     .textanimation {
         animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
+    }
 
     @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
+        from {
+            border-right-color: var(--quinary);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
     }
 
     @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 345px;
+        }
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 679px) {
+/* Medium devices */
+@media (min-width: 768px) {
     .landing-header {
         margin-top: 10px;
         margin-bottom: 10px;
-        position:relative;
+        position: relative;
         width: 95% !important;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 60px;
         width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
+        transition: height 1.3s, width 1.3s, font-size 1.3s;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
@@ -941,19 +468,19 @@ body {
         margin-bottom: 10px;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 180px;
         width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         font-size: 14px !important;
-        position:relative;
+        position: relative;
         top: 0px;
     }
 
     .landing-footer:hover {
         color: var(--quinary);
-        top:-1px;
+        top: -1px;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
     }
 
@@ -968,17 +495,17 @@ body {
 
     .landing-headericons {
         margin-top: 18px !important;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .landing-iconsHeader {
         color: var(--quinary);
         margin-right: 5px;
     }
-    
+
     .landing-iconsHeader:hover {
         color: #a9ffff;
     }
@@ -1003,7 +530,13 @@ body {
     }
 
     @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 35px;};
+        25% {
+            background-color: var(--secondary);
+            box-shadow: 0px 0px 22px var(--secondary);
+            top: 35px;
+        }
+
+        ;
     }
 
     .ledonimageRight {
@@ -1025,7 +558,13 @@ body {
     }
 
     @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -22px;};
+        25% {
+            background-color: #8695d3;
+            box-shadow: 0px 0px 22px #8695d3;
+            top: -22px;
+        }
+
+        ;
     }
 
     /* LED para tema light */
@@ -1099,10 +638,10 @@ body {
         margin: 0 auto;
         white-space: nowrap;
         overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .textdestroyermyname {
@@ -1111,33 +650,43 @@ body {
 
     .textanimation {
         animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
+    }
 
     @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
+        from {
+            border-right-color: var(--quinary);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
     }
 
     @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
-    }
+        from {
+            width: 0;
+        }
 
+        to {
+            width: 345px;
+        }
+    }
 }
 
-@media only screen and (min-width: 680px) and (max-width: 991px) {
+/* Large devices */
+@media (min-width: 992px) {
     .landing-header {
         margin-top: 10px;
         margin-bottom: 10px;
-        position:relative;
+        position: relative;
         width: 95% !important;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 60px;
         width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
+        transition: height 1.3s, width 1.3s, font-size 1.3s;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
@@ -1146,19 +695,19 @@ body {
         margin-bottom: 10px;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 240px;
         width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         font-size: 14px !important;
-        position:relative;
+        position: relative;
         top: 0px;
     }
 
     .landing-footer:hover {
         color: var(--quinary);
-        top:-1px;
+        top: -1px;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
     }
 
@@ -1173,17 +722,17 @@ body {
 
     .landing-headericons {
         margin-top: 18px !important;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .landing-iconsHeader {
         color: var(--quinary);
         margin-right: 5px;
     }
-    
+
     .landing-iconsHeader:hover {
         color: #a9ffff;
     }
@@ -1208,7 +757,13 @@ body {
     }
 
     @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 35px;};
+        25% {
+            background-color: var(--secondary);
+            box-shadow: 0px 0px 22px var(--secondary);
+            top: 35px;
+        }
+
+        ;
     }
 
     .ledonimageRight {
@@ -1230,7 +785,13 @@ body {
     }
 
     @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -22px;};
+        25% {
+            background-color: #8695d3;
+            box-shadow: 0px 0px 22px #8695d3;
+            top: -22px;
+        }
+
+        ;
     }
 
     /* LED para tema light */
@@ -1304,10 +865,10 @@ body {
         margin: 0 auto;
         white-space: nowrap;
         overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .textdestroyermyname {
@@ -1316,47 +877,58 @@ body {
 
     .textanimation {
         animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
+    }
 
     @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
+        from {
+            border-right-color: var(--quinary);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
     }
 
     @keyframes texthello {
-        from { width: 0; }
-        to { width: 345px; }
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 345px;
+        }
     }
 }
 
-@media only screen and (min-width: 992px) {
+/* X-Large devices */
+@media (min-width: 1200px) {
     .landing-header {
         margin-top: 10px;
         margin-bottom: 10px;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 60px;
         width: 100%;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
+        transition: height 1.3s, width 1.3s, font-size 1.3s;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     .landing-header:hover {
         height: 65px;
         font-size: 18px;
-        transition: height  1.3s, width  1.3s, font-size 1.3s;
+        transition: height 1.3s, width 1.3s, font-size 1.3s;
         color: var(--quinary);
     }
 
     .landing-headericons {
         margin-top: 18px !important;
         height: 75px;
-        -webkit-user-select:none;  
-        -moz-user-select:none;     
-        -ms-user-select:none;      
-        user-select:none;  
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .landing-footer {
@@ -1364,19 +936,19 @@ body {
         margin-bottom: 10px;
         background-color: var(--primary);
         border-radius: 8px;
-        color:  var(--quinary);
+        color: var(--quinary);
         text-align: center;
         height: 180px;
         width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         font-size: 14px !important;
-        position:relative;
+        position: relative;
         top: 0px;
     }
 
     .landing-footer:hover {
         color: var(--quinary);
-        top:-1px;
+        top: -1px;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 20px 30px, rgba(0, 0, 0, 0.23) 0px 12px 12px;
     }
 
@@ -1393,7 +965,7 @@ body {
         border-radius: 8px;
         background-color: var(--primary);
         color: var(--quinary);
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;   
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     .jsinputCompoundcalc {
@@ -1469,7 +1041,13 @@ body {
     }
 
     @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
+        25% {
+            background-color: var(--secondary);
+            box-shadow: 0px 0px 22px var(--secondary);
+            top: 85px;
+        }
+
+        ;
     }
 
     .ledonimageRight {
@@ -1491,7 +1069,13 @@ body {
     }
 
     @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
+        25% {
+            background-color: #8695d3;
+            box-shadow: 0px 0px 22px #8695d3;
+            top: -35px;
+        }
+
+        ;
     }
 
     /* LED para tema light */
@@ -1514,7 +1098,13 @@ body {
     }
 
     @keyframes led {
-        25% {background-color: var(--secondary); box-shadow: 0px 0px 22px var(--secondary); top: 85px;};
+        25% {
+            background-color: var(--secondary);
+            box-shadow: 0px 0px 22px var(--secondary);
+            top: 85px;
+        }
+
+        ;
     }
 
     .ledonimageRightlight {
@@ -1536,7 +1126,13 @@ body {
     }
 
     @keyframes ledright {
-        25% {background-color: #8695d3; box-shadow: 0px 0px 22px #8695d3; top: -35px;};
+        25% {
+            background-color: #8695d3;
+            box-shadow: 0px 0px 22px #8695d3;
+            top: -35px;
+        }
+
+        ;
     }
 
     /* Destroyer - first container */
@@ -1567,10 +1163,10 @@ body {
         margin: 0 auto;
         white-space: nowrap;
         overflow: hidden;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none;      
-        user-select: none; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .textdestroyer:hover {
@@ -1587,15 +1183,30 @@ body {
 
     .textanimation {
         animation: cursormodify 600ms infinite steps(40) normal, texthello 2s steps(40) 1s normal both;
-    }   
+    }
 
     @keyframes cursormodify {
-        from { border-right-color: var(--quinary); }
-        to { border-right-color: transparent; }
+        from {
+            border-right-color: var(--quinary);
+        }
+
+        to {
+            border-right-color: transparent;
+        }
     }
 
     @keyframes texthello {
-        from { width: 0; }
-        to { width: 653px; }
-    }    
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 653px;
+        }
+    }
 }
+
+/* XX-Large devices */
+/* @media (min-width: 1400px) { 
+
+} */
