@@ -1,3 +1,5 @@
+/* @import url(./main.css); */
+
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
@@ -222,6 +224,7 @@ body {
     max-height: 48%;
     height: 48%;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .imagesbodylandingSecondary {
@@ -230,6 +233,7 @@ body {
     max-height: 48%;
     height: 48%;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .imageangle {
