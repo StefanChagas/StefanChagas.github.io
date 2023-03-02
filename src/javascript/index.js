@@ -1,20 +1,27 @@
 function myselfsidebar() {
-    document.getElementById("mySidebar").style.width = "180px";
-    document.getElementById("containerheader").style.width = "70%";
-    document.getElementById("bodylandingContent").style.width = "70%";
-    document.getElementById("mySidebarImage").style.display = "block";
+    if (screen.width >= 992) {
+        document.getElementById("mySidebar").style.width = "180px";
+        document.getElementById("containerheader").style.width = "70%";
+        document.getElementById("bodylandingContent").style.width = "70%";
+        document.getElementById("mySidebarImage").style.display = "block";
+    }
 }
 
 function myselfsidebarclose() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("containerheader").style.width = "100%";
-    document.getElementById("bodylandingContent").style.width = "100%";
-    document.getElementById("mySidebarImage").style.display = "none";
+    if (screen.width >= 992) {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("containerheader").style.width = "100%";
+        document.getElementById("bodylandingContent").style.width = "100%";
+        document.getElementById("mySidebarImage").style.display = "none";
+    }
 }
 
 function bodyonLoad() {
     document.getElementById("bodylandingsecondaryContent").style.display = "none";
     document.getElementById("mySidebarImage").style.display = "none";
+    if (localStorage.getItem("theme") != "dark" && localStorage.getItem("theme") != "light") {
+        darkMode();
+    }
 }
 
 $('#buttonstartDestroyer').keydown(function(e) {
@@ -22,18 +29,20 @@ $('#buttonstartDestroyer').keydown(function(e) {
 });
 
 function destroyer() {
-    document.getElementById("allcontentindex").style.display = "block";
-    document.getElementById("divdestroyer").style.display = "none";
-    sessionStorage.setItem("destroyreload","off");
-    themetest = localStorage.getItem("theme");
-    if (themetest == "dark"){
-        darkMode();
+    if (sessionStorage.getItem("destroyreload") != "off") {
+        document.getElementById("allcontentindex").style.display = "block";
+        document.getElementById("divdestroyer").style.display = "none";
+        sessionStorage.setItem("destroyreload", "off");
+        themetest = localStorage.getItem("theme");
+        if (themetest == "dark"){
+            darkMode();
+        }
+        else if (themetest == "light"){
+            lightMode();
+        }
+        document.getElementById("buttonthemeFocus").focus();
+        document.getElementById("mySidebarImage").style.display = "none";
     }
-    else if (themetest == "light"){
-        lightMode();
-    }
-    document.getElementById("buttonthemeFocus").focus();
-    document.getElementById("mySidebarImage").style.display = "none";
 }
 
 function landingpageSecondary() {
@@ -70,26 +79,26 @@ function lightMode() {
         document.getElementById("landingbuttonsPage").classList.remove('darkThemeclean');
 
         // color LED
-        document.getElementById("led11").classList.remove('ledonimageLeft');
-        document.getElementById("led11").classList.add('ledonimageLeftlight');
-        document.getElementById("led12").classList.remove('ledonimageRight');
-        document.getElementById("led12").classList.add('ledonimageRightlight');
-        document.getElementById("led21").classList.remove('ledonimageLeft');
-        document.getElementById("led21").classList.add('ledonimageLeftlight');
-        document.getElementById("led22").classList.remove('ledonimageRight');
-        document.getElementById("led22").classList.add('ledonimageRightlight');
-        document.getElementById("led31").classList.remove('ledonimageLeft');
-        document.getElementById("led31").classList.add('ledonimageLeftlight');
-        document.getElementById("led32").classList.remove('ledonimageRight');
-        document.getElementById("led32").classList.add('ledonimageRightlight');
-        document.getElementById("led41").classList.remove('ledonimageLeft');
-        document.getElementById("led41").classList.add('ledonimageLeftlight');
-        document.getElementById("led42").classList.remove('ledonimageRight');
-        document.getElementById("led42").classList.add('ledonimageRightlight');
-        document.getElementById("led51").classList.remove('ledonimageLeft');
-        document.getElementById("led51").classList.add('ledonimageLeftlight');
-        document.getElementById("led52").classList.remove('ledonimageRight');
-        document.getElementById("led52").classList.add('ledonimageRightlight');
+        // document.getElementById("led11").classList.remove('ledonimageLeft');
+        // document.getElementById("led11").classList.add('ledonimageLeftlight');
+        // document.getElementById("led12").classList.remove('ledonimageRight');
+        // document.getElementById("led12").classList.add('ledonimageRightlight');
+        // document.getElementById("led21").classList.remove('ledonimageLeft');
+        // document.getElementById("led21").classList.add('ledonimageLeftlight');
+        // document.getElementById("led22").classList.remove('ledonimageRight');
+        // document.getElementById("led22").classList.add('ledonimageRightlight');
+        // document.getElementById("led31").classList.remove('ledonimageLeft');
+        // document.getElementById("led31").classList.add('ledonimageLeftlight');
+        // document.getElementById("led32").classList.remove('ledonimageRight');
+        // document.getElementById("led32").classList.add('ledonimageRightlight');
+        // document.getElementById("led41").classList.remove('ledonimageLeft');
+        // document.getElementById("led41").classList.add('ledonimageLeftlight');
+        // document.getElementById("led42").classList.remove('ledonimageRight');
+        // document.getElementById("led42").classList.add('ledonimageRightlight');
+        // document.getElementById("led51").classList.remove('ledonimageLeft');
+        // document.getElementById("led51").classList.add('ledonimageLeftlight');
+        // document.getElementById("led52").classList.remove('ledonimageRight');
+        // document.getElementById("led52").classList.add('ledonimageRightlight');
     }
 
     // line border 100% width
@@ -143,6 +152,7 @@ function lightMode() {
     }
 
 }
+
 function darkMode() {
     document.getElementById("landingbuttonTheme").classList.remove('bi-brightness-alt-high');
     document.getElementById("landingbuttonTheme").classList.add('bi-brightness-alt-high-fill');
@@ -156,26 +166,26 @@ function darkMode() {
         document.getElementById("landingbuttonsPage").classList.add('darkThemeclean');
 
         // color LED
-        document.getElementById("led11").classList.add('ledonimageLeft');
-        document.getElementById("led11").classList.remove('ledonimageLeftlight');
-        document.getElementById("led12").classList.add('ledonimageRight');
-        document.getElementById("led12").classList.remove('ledonimageRightlight');
-        document.getElementById("led21").classList.add('ledonimageLeft');
-        document.getElementById("led21").classList.remove('ledonimageLeftlight');
-        document.getElementById("led22").classList.add('ledonimageRight');
-        document.getElementById("led22").classList.remove('ledonimageRightlight');
-        document.getElementById("led31").classList.add('ledonimageLeft');
-        document.getElementById("led31").classList.remove('ledonimageLeftlight');
-        document.getElementById("led32").classList.add('ledonimageRight');
-        document.getElementById("led32").classList.remove('ledonimageRightlight');
-        document.getElementById("led41").classList.add('ledonimageLeft');
-        document.getElementById("led41").classList.remove('ledonimageLeftlight');
-        document.getElementById("led42").classList.add('ledonimageRight');
-        document.getElementById("led42").classList.remove('ledonimageRightlight');
-        document.getElementById("led51").classList.add('ledonimageLeft');
-        document.getElementById("led51").classList.remove('ledonimageLeftlight');
-        document.getElementById("led52").classList.add('ledonimageRight');
-        document.getElementById("led52").classList.remove('ledonimageRightlight');
+        // document.getElementById("led11").classList.add('ledonimageLeft');
+        // document.getElementById("led11").classList.remove('ledonimageLeftlight');
+        // document.getElementById("led12").classList.add('ledonimageRight');
+        // document.getElementById("led12").classList.remove('ledonimageRightlight');
+        // document.getElementById("led21").classList.add('ledonimageLeft');
+        // document.getElementById("led21").classList.remove('ledonimageLeftlight');
+        // document.getElementById("led22").classList.add('ledonimageRight');
+        // document.getElementById("led22").classList.remove('ledonimageRightlight');
+        // document.getElementById("led31").classList.add('ledonimageLeft');
+        // document.getElementById("led31").classList.remove('ledonimageLeftlight');
+        // document.getElementById("led32").classList.add('ledonimageRight');
+        // document.getElementById("led32").classList.remove('ledonimageRightlight');
+        // document.getElementById("led41").classList.add('ledonimageLeft');
+        // document.getElementById("led41").classList.remove('ledonimageLeftlight');
+        // document.getElementById("led42").classList.add('ledonimageRight');
+        // document.getElementById("led42").classList.remove('ledonimageRightlight');
+        // document.getElementById("led51").classList.add('ledonimageLeft');
+        // document.getElementById("led51").classList.remove('ledonimageLeftlight');
+        // document.getElementById("led52").classList.add('ledonimageRight');
+        // document.getElementById("led52").classList.remove('ledonimageRightlight');
     }
 
     // line border 100% width
