@@ -67,6 +67,10 @@
             width: 345px;
         }
     }
+
+    .margintopResponsive {
+        margin-top: 10px;
+    }
 }
 
 /* Small devices */
@@ -144,6 +148,10 @@
             width: 345px;
         }
     }
+
+    .margintopResponsive {
+        margin-top: 10px;
+    }
 }
 
 /* Medium devices */
@@ -212,6 +220,10 @@
         to {
             width: 345px;
         }
+    }
+
+    .margintopResponsive {
+        margin-top: 10px;
     }
 }
 
@@ -286,6 +298,10 @@
             width: 345px;
         }
     }
+
+    .margintopResponsive {
+        margin-top: 10px;
+    }
 }
 
 /* X-Large devices */
@@ -295,11 +311,15 @@
     }
 
     /* section for Compound Front */
+    .jstitleinputformCompoundcalc {
+        display: inline-block;
+    }
+
     .jsbaseCompoundcalc {
         margin-top: 10px;
         margin-bottom: 10px;
         width: 100%;
-        height: 320px;
+        height: 342px;
         border-radius: 8px;
         background-color: var(--primary);
         color: var(--quinary);
@@ -426,6 +446,10 @@
         to {
             width: 653px;
         }
+    }
+
+    .margintopResponsive {
+        margin-top: 10px;
     }
 }
 

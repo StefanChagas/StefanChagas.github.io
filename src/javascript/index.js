@@ -17,11 +17,28 @@ function myselfsidebarclose() {
 }
 
 function bodyonLoad() {
-    document.getElementById("bodylandingsecondaryContent").style.display = "none";
-    document.getElementById("mySidebarImage").style.display = "none";
+    if ($("#bodylandingsecondaryContent").length) { 
+        document.getElementById("bodylandingsecondaryContent").style.display = "none";
+    }
+    if ($("#mySidebarImage").length) { 
+        document.getElementById("mySidebarImage").style.display = "none";
+    }
     if (localStorage.getItem("theme") != "dark" && localStorage.getItem("theme") != "light") {
         darkMode();
     }
+
+    var date = new Date().toLocaleTimeString();
+    date = date.split(":");
+    date = parseFloat(date[0]);
+
+    if (date <= 12) {
+        document.getElementById("titleMypicture").innerHTML = 'Bom dia! <i class="bi bi-emoji-wink"></i>';
+    } else if (date <= 18) {
+        document.getElementById("titleMypicture").innerHTML = 'Boa tarde! <i class="bi bi-emoji-wink"></i>';
+    } else {
+        document.getElementById("titleMypicture").innerHTML = 'Boa noite! <i class="bi bi-emoji-wink"></i>';
+    }
+
 }
 
 $('#buttonstartDestroyer').keydown(function(e) {
@@ -77,28 +94,6 @@ function lightMode() {
     // index.html - button other page
     if ($("#landingbuttonsPage").length) { 
         document.getElementById("landingbuttonsPage").classList.remove('darkThemeclean');
-
-        // color LED
-        // document.getElementById("led11").classList.remove('ledonimageLeft');
-        // document.getElementById("led11").classList.add('ledonimageLeftlight');
-        // document.getElementById("led12").classList.remove('ledonimageRight');
-        // document.getElementById("led12").classList.add('ledonimageRightlight');
-        // document.getElementById("led21").classList.remove('ledonimageLeft');
-        // document.getElementById("led21").classList.add('ledonimageLeftlight');
-        // document.getElementById("led22").classList.remove('ledonimageRight');
-        // document.getElementById("led22").classList.add('ledonimageRightlight');
-        // document.getElementById("led31").classList.remove('ledonimageLeft');
-        // document.getElementById("led31").classList.add('ledonimageLeftlight');
-        // document.getElementById("led32").classList.remove('ledonimageRight');
-        // document.getElementById("led32").classList.add('ledonimageRightlight');
-        // document.getElementById("led41").classList.remove('ledonimageLeft');
-        // document.getElementById("led41").classList.add('ledonimageLeftlight');
-        // document.getElementById("led42").classList.remove('ledonimageRight');
-        // document.getElementById("led42").classList.add('ledonimageRightlight');
-        // document.getElementById("led51").classList.remove('ledonimageLeft');
-        // document.getElementById("led51").classList.add('ledonimageLeftlight');
-        // document.getElementById("led52").classList.remove('ledonimageRight');
-        // document.getElementById("led52").classList.add('ledonimageRightlight');
     }
 
     // line border 100% width
@@ -164,28 +159,6 @@ function darkMode() {
     // index.html - button other page
     if ($("#landingbuttonsPage").length) { 
         document.getElementById("landingbuttonsPage").classList.add('darkThemeclean');
-
-        // color LED
-        // document.getElementById("led11").classList.add('ledonimageLeft');
-        // document.getElementById("led11").classList.remove('ledonimageLeftlight');
-        // document.getElementById("led12").classList.add('ledonimageRight');
-        // document.getElementById("led12").classList.remove('ledonimageRightlight');
-        // document.getElementById("led21").classList.add('ledonimageLeft');
-        // document.getElementById("led21").classList.remove('ledonimageLeftlight');
-        // document.getElementById("led22").classList.add('ledonimageRight');
-        // document.getElementById("led22").classList.remove('ledonimageRightlight');
-        // document.getElementById("led31").classList.add('ledonimageLeft');
-        // document.getElementById("led31").classList.remove('ledonimageLeftlight');
-        // document.getElementById("led32").classList.add('ledonimageRight');
-        // document.getElementById("led32").classList.remove('ledonimageRightlight');
-        // document.getElementById("led41").classList.add('ledonimageLeft');
-        // document.getElementById("led41").classList.remove('ledonimageLeftlight');
-        // document.getElementById("led42").classList.add('ledonimageRight');
-        // document.getElementById("led42").classList.remove('ledonimageRightlight');
-        // document.getElementById("led51").classList.add('ledonimageLeft');
-        // document.getElementById("led51").classList.remove('ledonimageLeftlight');
-        // document.getElementById("led52").classList.add('ledonimageRight');
-        // document.getElementById("led52").classList.remove('ledonimageRightlight');
     }
 
     // line border 100% width
@@ -384,8 +357,12 @@ $("#buttonDownloadcompoundcalc").click(function(){
     doc.setFontSize(25)
     doc.setTextColor("#02adad");
     doc.text("Cálculo de Juros Compostos", 25, 25)
-    doc.addImage("./src/images/projects.png", "PNG", 163, 12, 35, 35)
     doc.setFontSize(17)
+    
+    // console.log(doc)
+    // doc.addImage("./src/images/pdfcompound.png", "PNG", 163, 12, 35, 35)
+    // console.log(doc)
+
     doc.setTextColor("black");
     doc.text("Aporte inicial: ", 25, 45)
     doc.text("R$ " + initialvalue, 105, 45)

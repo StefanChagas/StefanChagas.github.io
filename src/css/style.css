@@ -126,6 +126,19 @@ body {
     user-select:none; 
 }
 
+ul {
+    display: none;
+}
+
+.showDesciption:hover > ul {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    margin-left: 5px;
+    margin-top: 17px;
+    font-size: 15px;
+}
+
 /* for header, footer and landing page */
 .landing-header {
     margin-top: 10px;
